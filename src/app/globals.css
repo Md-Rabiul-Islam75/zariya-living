@@ -1,26 +1,43 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Zariya brand palette */
+  --background: #092c2c; /* deep teal */
+  --foreground: #f4ede4; /* warm cream text */
+  --gold: #dfc1a5; /* gold / champagne accent */
+  --gold-soft: #c9a988;
+  --teal-deep: #061f1f;
+  --teal-panel: #0d3838;
+  --muted: #9bb0ad;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-teal-deep: var(--teal-deep);
+  --color-teal-panel: var(--teal-panel);
+  --color-muted: var(--muted);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-serif: var(--font-cormorant);
+  --font-sans: var(--font-jost);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+/* Smooth scrolling for in-page anchor navigation */
+html {
+  scroll-behavior: smooth;
 }
