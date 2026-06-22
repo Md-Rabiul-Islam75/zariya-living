@@ -15,24 +15,41 @@ export function Philosophy() {
           </Reveal>
           <Reveal direction="up" delay={0.05}>
             <h2 className="font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl md:text-5xl">
-              We are not building for today&apos;s market.
+              Zariya Means The Path.
             </h2>
           </Reveal>
           <Reveal direction="up" delay={0.12}>
             <p className="mt-6 text-lg font-light leading-relaxed text-foreground/75">
-              Most property developments think in decades. Zariya thinks in generations. We are building a place
-              your grandchildren will be glad exists — one philosophy expressed across four landscapes, woven
-              into a single way of living.
+              For centuries, Sylhet has been known as the land of the 360 Auliyas — saints who carried the
+              light of peace, faith, and healing into Bengal. This sacred place was never just a destination.
+              It was always a path.
             </p>
           </Reveal>
           <Reveal direction="up" delay={0.18}>
             <p className="mt-4 text-lg font-light leading-relaxed text-foreground/75">
-              Resort, farm, and home are not separate ventures here. They are one ecosystem — where what you eat
-              is grown beside where you rest, and the people around you become a community for life.
+              There comes a point in life when success alone stops feeling like enough. The career milestones
+              are behind you. The responsibilities are met. Life looks complete from the outside. But deep
+              inside, the heart begins searching for something quieter. A place. Roots. People who know you
+              without explanation.
+            </p>
+          </Reveal>
+          <Reveal direction="up" delay={0.22}>
+            <p className="mt-4 text-lg font-light leading-relaxed text-foreground/75">
+              Zariya came out of that longing. The name means &lsquo;The Path&rsquo; — a path that reconnects
+              you with faith, nature, belonging, and the version of yourself you set aside somewhere along the
+              way.
             </p>
           </Reveal>
 
-          <Reveal direction="up" delay={0.24}>
+          <Reveal direction="up" delay={0.28}>
+            <blockquote className="mt-10 border-l-2 border-gold pl-6">
+              <p className="font-serif text-2xl font-light italic leading-relaxed text-foreground/90 md:text-3xl">
+                &ldquo;Sylhet was never just a destination. It was always a path.&rdquo;
+              </p>
+            </blockquote>
+          </Reveal>
+
+          <Reveal direction="up" delay={0.34}>
             <div className="mt-10 flex gap-10">
               {[
                 { value: "4", label: "Landscapes" },
