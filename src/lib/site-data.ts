@@ -6,9 +6,10 @@ export const SITE = {
   tagline: "Living",
   hero: {
     eyebrow: "Sylhet, Bangladesh",
-    title: "One Philosophy.\nFour Landscapes.\nA Lifetime of Belonging.",
+    title: "Where Do I Truly\nBelong?",
+    tagline: "A Peaceful Return to Nature, Belonging & Yourself",
     subtitle:
-      "Most developments think in decades. Zariya thinks in generations — an integrated resort, organic farm, and lagoon villa community built as one.",
+      "Zariya is a faith-aligned, nature-rooted community in the heart of Sylhet — built for people who have worked hard and are ready to come home.",
     primaryCta: "Book a Visit",
     secondaryCta: "Explore the Path",
   },
