@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { NAV_LINKS } from "@/lib/site-data";
+import { Wordmark } from "@/components/ui/Wordmark";
 
 export function Footer() {
   return (
@@ -8,13 +8,9 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="flex flex-col items-center gap-10 md:flex-row md:items-start md:justify-between">
           <div className="max-w-sm text-center md:text-left">
-            <Image
-              src="/images/logo.png"
-              alt="Zariya Living"
-              width={140}
-              height={56}
-              className="mx-auto h-14 w-auto object-contain md:mx-0"
-            />
+            <Link href="/" aria-label="Zariya Living — home" className="inline-block">
+              <Wordmark size="lg" />
+            </Link>
             <p className="mt-5 text-sm font-light leading-relaxed text-foreground/60">
               One philosophy. Four landscapes. A lifetime of belonging. A community-living development in Sylhet,
               Bangladesh.
@@ -31,7 +27,7 @@ export function Footer() {
                 {link.label}
               </Link>
             ))}
-            <Link href="#book" className="text-sm font-light text-gold transition-colors hover:text-gold-soft">
+            <Link href="/visit" className="text-sm font-light text-gold transition-colors hover:text-gold-soft">
               Book a Visit
             </Link>
           </nav>

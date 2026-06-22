@@ -14,14 +14,31 @@ export const SITE = {
   },
 } as const;
 
-export const NAV_LINKS = [
-  { label: "Explore", href: "#philosophy" },
-  { label: "Resort", href: "#resort" },
-  { label: "Agro", href: "#agro" },
-  { label: "Villas", href: "#villas" },
-  { label: "Community", href: "#community" },
-  { label: "Projects", href: "#projects" },
-] as const;
+export type NavLink = {
+  label: string;
+  href: string;
+  children?: { label: string; href: string }[];
+};
+
+// Routes for pages we'll build out individually. For now they point at the
+// (not-yet-built) page paths — the branded 404 covers them until then.
+export const NAV_LINKS: NavLink[] = [
+  { label: "Explore", href: "/explore" },
+  {
+    label: "Projects",
+    href: "/projects",
+    children: [
+      { label: "Flagship — Sylhet", href: "/projects/sylhet" },
+      { label: "Niladri", href: "/projects/niladri" },
+      { label: "Noakhali", href: "/projects/noakhali" },
+      { label: "Cox's Bazar", href: "/projects/coxs-bazar" },
+    ],
+  },
+  { label: "Ownership & Income", href: "/ownership" },
+  { label: "Township & Amenities", href: "/township" },
+  { label: "Community", href: "/community" },
+  { label: "Visit", href: "/visit" },
+];
 
 export const PILLARS = [
   {
