@@ -14,11 +14,26 @@ export const SITE = {
   },
 } as const;
 
-// Contact details. Replace the placeholder number with the real one.
+// Contact details. Replace placeholders with the real values.
 export const CONTACT = {
-  whatsapp: "8801700000000", // international format, no '+' — used in wa.me links
+  whatsapp: "8801907070640", // international format, no '+' — used in wa.me links
+  phone: "+880 1907 070640-43",
+  email: "info@zariyaliving.com",
+  address: "32 Sonargaon Janapath Road, Sector 12, Uttara, Dhaka 1230, Bangladesh",
   bookHref: "/visit",
 } as const;
+
+export const SOCIAL_LINKS = [
+  { label: "Facebook", href: "https://facebook.com", icon: "facebook" },
+  { label: "YouTube", href: "https://youtube.com", icon: "youtube" },
+  { label: "Instagram", href: "https://instagram.com", icon: "instagram" },
+  { label: "LinkedIn", href: "https://linkedin.com", icon: "linkedin" },
+] as const;
+
+export const LEGAL_LINKS = [
+  { label: "Privacy & Terms", href: "/privacy" },
+  { label: "Legal & Disclosures", href: "/legal" },
+] as const;
 
 export type NavLink = {
   label: string;
