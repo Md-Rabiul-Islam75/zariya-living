@@ -14,6 +14,12 @@ export const SITE = {
   },
 } as const;
 
+// Contact details. Replace the placeholder number with the real one.
+export const CONTACT = {
+  whatsapp: "8801700000000", // international format, no '+' — used in wa.me links
+  bookHref: "/visit",
+} as const;
+
 export type NavLink = {
   label: string;
   href: string;
