@@ -28,13 +28,13 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+      <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
         <Link href="/" aria-label="Zariya Living — home">
           <Wordmark size="md" />
         </Link>
 
-        {/* Desktop links */}
-        <ul className="hidden items-center gap-8 lg:flex">
+        {/* Desktop links — absolutely centered in the bar */}
+        <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 lg:flex">
           {NAV_LINKS.map((link) => (
             <DesktopLink key={link.href} link={link} />
           ))}
