@@ -167,6 +167,30 @@ export const PROJECTS = [
   },
 ] as const;
 
+export const TESTIMONIALS = [
+  {
+    quote:
+      "My children grew up speaking another language, in another country. Zariya is the first place that feels like ours — somewhere they can finally call home.",
+    name: "Mirza Tanzir Ahmed",
+    role: "Entrepreneur",
+    location: "London",
+  },
+  {
+    quote:
+      "I came expecting a brochure and a hard sell. Instead I spent a morning walking the land in silence. That moment told me everything I needed to know.",
+    name: "Dr. Anwar Hossain",
+    role: "Retired Surgeon",
+    location: "New York",
+  },
+  {
+    quote:
+      "What sold me wasn't the returns — it was sitting at Fajr and realising my grandchildren could one day pray on the same ground. That kind of belonging is rare.",
+    name: "Farzana Karim",
+    role: "Founding Member",
+    location: "Sydney",
+  },
+] as const;
+
 export const INTEREST_OPTIONS = [
   "Lagoon Villa Share",
   "Resort Share",

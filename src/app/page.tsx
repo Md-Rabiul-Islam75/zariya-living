@@ -7,6 +7,7 @@ import { Agro } from "@/components/sections/Agro";
 import { Villas } from "@/components/sections/Villas";
 import { Membership } from "@/components/sections/Membership";
 import { Community } from "@/components/sections/Community";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { Projects } from "@/components/sections/Projects";
 import { BookVisit } from "@/components/sections/BookVisit";
 import { Footer } from "@/components/Footer";
@@ -24,6 +25,7 @@ export default function Home() {
         <Villas />
         <Membership />
         <Community />
+        <Testimonials />
         <Projects />
         <BookVisit />
       </main>
