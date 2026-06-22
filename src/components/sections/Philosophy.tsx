@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { Reveal } from "@/components/motion/Reveal";
-import { Parallax } from "@/components/motion/Parallax";
 
 export function Philosophy() {
   return (
@@ -50,17 +49,16 @@ export function Philosophy() {
         </div>
 
         <Reveal direction="left" delay={0.1}>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
-            <Parallax distance={50} className="absolute inset-0">
-              <Image
-                src="/images/masterplan.png"
-                alt="Zariya masterplan aerial view"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="scale-110 object-cover"
-              />
-            </Parallax>
-            <div className="absolute inset-0 bg-gradient-to-t from-teal-deep/40 to-transparent" />
+          <div className="overflow-hidden rounded-2xl">
+            <Image
+              src="/images/masterplan.png"
+              alt="Zariya masterplan aerial view"
+              width={1535}
+              height={1024}
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              className="h-auto w-full object-contain"
+              priority
+            />
           </div>
         </Reveal>
       </div>
