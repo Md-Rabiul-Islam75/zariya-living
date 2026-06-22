@@ -206,24 +206,29 @@ function DesktopLink({ link }: { link: NavLink }) {
 
       <AnimatePresence>
         {hover && (
-          <motion.ul
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            transition={{ duration: 0.25, ease: EASE }}
-            className="absolute left-1/2 top-full z-50 mt-3 w-52 -translate-x-1/2 overflow-hidden rounded-xl border border-gold/15 bg-teal-deep/95 py-2 shadow-xl backdrop-blur-md"
+          // pt-3 is a transparent "bridge" so moving the cursor from the
+          // trigger into the menu never crosses a dead gap (no flicker).
+          <motion.div
+            initial={{ opacity: 0, y: 6, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 6, scale: 0.96 }}
+            transition={{ duration: 0.3, ease: EASE }}
+            style={{ transformOrigin: "top center" }}
+            className="absolute left-1/2 top-full z-50 w-56 -translate-x-1/2 pt-3"
           >
-            {link.children.map((child) => (
-              <li key={child.href}>
-                <Link
-                  href={child.href}
-                  className="block px-5 py-2.5 text-sm font-light text-foreground/80 transition-colors hover:bg-gold/10 hover:text-gold"
-                >
-                  {child.label}
-                </Link>
-              </li>
-            ))}
-          </motion.ul>
+            <ul className="overflow-hidden rounded-xl border border-gold/15 bg-teal-deep/95 py-2 shadow-2xl backdrop-blur-md">
+              {link.children.map((child) => (
+                <li key={child.href}>
+                  <Link
+                    href={child.href}
+                    className="block px-5 py-2.5 text-sm font-light text-foreground/80 transition-colors hover:bg-gold/10 hover:text-gold"
+                  >
+                    {child.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
         )}
       </AnimatePresence>
     </li>

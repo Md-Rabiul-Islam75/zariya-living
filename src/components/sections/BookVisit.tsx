@@ -3,10 +3,12 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, type FormEvent } from "react";
 import { Reveal } from "@/components/motion/Reveal";
+import { Select } from "@/components/ui/Select";
 import { INTEREST_OPTIONS } from "@/lib/site-data";
 
 export function BookVisit() {
   const [submitted, setSubmitted] = useState(false);
+  const [interest, setInterest] = useState("");
 
   // Static build: no backend yet. We just show a confirmation.
   // Wire this to an API route / CRM when going dynamic.
@@ -85,24 +87,14 @@ export function BookVisit() {
                   <input className={inputClass} type="text" name="name" placeholder="Full Name" required />
                   <input className={inputClass} type="email" name="email" placeholder="Email Address" required />
                   <input className={inputClass} type="text" name="country" placeholder="Country of Residence" />
-                  <div className="relative">
-                    <select
-                      className={`${inputClass} appearance-none text-foreground/80`}
-                      name="interest"
-                      defaultValue=""
-                      required
-                    >
-                      <option value="" disabled className="bg-teal-deep">
-                        I&apos;m interested in…
-                      </option>
-                      {INTEREST_OPTIONS.map((opt) => (
-                        <option key={opt} value={opt} className="bg-teal-deep">
-                          {opt}
-                        </option>
-                      ))}
-                    </select>
-                    <span className="pointer-events-none absolute right-0 top-3 text-gold">▾</span>
-                  </div>
+                  <Select
+                    options={INTEREST_OPTIONS}
+                    value={interest}
+                    onChange={setInterest}
+                    placeholder="I'm interested in…"
+                  />
+                  {/* Keeps the value in normal form data when wired to a backend */}
+                  <input type="hidden" name="interest" value={interest} />
                   <input className={inputClass} type="text" name="time" placeholder="Best time to reach me" />
 
                   <motion.button
