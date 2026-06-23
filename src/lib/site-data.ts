@@ -135,6 +135,43 @@ export const VILLA_GALLERY = [
   { title: "The Community", image: "/images/villa-cottages.png" },
 ] as const;
 
+export const MEMBERSHIP_PRIVILEGES = [
+  {
+    category: "Resort & Lifestyle",
+    title: "Full Facility Access",
+    description:
+      "Complimentary access to the Observation Deck, Sky Lounge, Theatre, Gym, and resort swimming pools.",
+  },
+  {
+    category: "Food & Beverage",
+    title: "15% Dining Discount",
+    description: "A standing 15% discount on food & beverage across Zariya's resort dining.",
+  },
+  {
+    category: "Events & Hospitality",
+    title: "Up to 80% Off",
+    description:
+      "Priority event access, plus up to 80% off Convention Hall and Business Centre usage.",
+  },
+  {
+    category: "Sports & Recreation",
+    title: "Active Family Living",
+    description: "Up to 80% off sports facilities — wellness and recreation for the whole family.",
+  },
+  {
+    category: "Future Ownership",
+    title: "Priority Access",
+    description:
+      "First access and special privileges on future Zariya projects, including Lagoon Villa Shares.",
+  },
+  {
+    category: "Global Community",
+    title: "Founding Member Status",
+    description:
+      "A global network of NRBs, professionals, and families — with founding-member recognition.",
+  },
+] as const;
+
 export const MEMBERSHIP = [
   {
     title: "Lagoon Villa Share",

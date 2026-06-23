@@ -5,6 +5,7 @@ import { Pillars } from "@/components/sections/Pillars";
 import { Resort } from "@/components/sections/Resort";
 import { Agro } from "@/components/sections/Agro";
 import { Villas } from "@/components/sections/Villas";
+import { Privileges } from "@/components/sections/Privileges";
 import { Membership } from "@/components/sections/Membership";
 import { Community } from "@/components/sections/Community";
 import { Testimonials } from "@/components/sections/Testimonials";
@@ -23,6 +24,7 @@ export default function Home() {
         <Resort />
         <Agro />
         <Villas />
+        <Privileges />
         <Membership />
         <Community />
         <Testimonials />
