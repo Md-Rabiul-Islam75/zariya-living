@@ -251,3 +251,92 @@ export const INTEREST_OPTIONS = [
   "Lagoon Membership",
   "Just Exploring",
 ] as const;
+
+/* ------------------------------------------------------------------ */
+/* Explore page                                                        */
+/* ------------------------------------------------------------------ */
+
+export const EXPLORE_HERO = {
+  eyebrow: "Explore",
+  title: "Faith. Nature. Legacy.",
+  subtitle: "Three words. One life philosophy.",
+  image: "/images/project-niladri.jpg",
+} as const;
+
+export const EXPLORE_BELIEFS = [
+  {
+    icon: "faith",
+    title: "Faith",
+    description:
+      "We believe a life rooted in faith is a life with direction. Zariya is designed for families who want their environment to reflect their values: peaceful, purposeful, and free from distraction.",
+  },
+  {
+    icon: "nature",
+    title: "Nature",
+    description:
+      "We believe humans belong in nature. The overcrowded city, the noise, the screen — these were never meant to be permanent. Zariya returns you to open skies, green land, and mornings that begin with birdsong, not traffic.",
+  },
+  {
+    icon: "legacy",
+    title: "Legacy",
+    description:
+      "We believe the truest measure of success is what you leave behind. A freehold villa. A family home. A community your children will grow up in. Zariya is built to be passed on.",
+  },
+] as const;
+
+export const EXPLORE_PATH = {
+  title: "'Zariya' Means The Path.",
+  paragraphs: [
+    "Sylhet has always been a place of spiritual significance. The 360 Auliyas who walked this land centuries ago left behind more than mosques and shrines — they left a culture of faith, community, and inner peace that this soil still carries.",
+    "When we chose the name Zariya, we were not looking for something poetic. We were looking for something true. The Path is not just where you walk. It is how you live.",
+    "Zariya is our attempt to build a community worthy of that name — where the environment itself encourages you to slow down, reflect, and reconnect with what matters.",
+  ],
+} as const;
+
+export const EXPLORE_LONGTERM = {
+  title: "Built to Last 100 Years.",
+  paragraphs: [
+    "Most property developments think in decades. Zariya thinks in generations.",
+    "The masterplan is designed with a peace buffer — land kept permanently green to protect the community from future encroachment. The agro ecosystem is designed for long-term sustainability. The Lagoon Villas are freehold, heritable, and resaleable.",
+    "We are not building for today's market. We are building a place your grandchildren will be glad exists.",
+  ],
+  stats: [
+    { value: "2,100", label: "Decimals of Land" },
+    { value: "100-Year", label: "Vision" },
+    { value: "145", label: "Exclusive Villas" },
+  ],
+} as const;
+
+export const EXPLORE_VOICES = [
+  {
+    quote:
+      "I spent 22 years in the UK building a career. What I didn't realise was that I was also spending 22 years quietly missing home. Zariya gave me somewhere to actually return to.",
+    author: "NRB Member, London",
+  },
+  {
+    quote:
+      "My children are grown. My responsibilities are lighter. I wanted somewhere peaceful, somewhere with community, somewhere my grandchildren would love to visit. I found all three.",
+    author: "Founding Member, Dhaka",
+  },
+] as const;
+
+export const EXPLORE_NEWS = [
+  {
+    category: "Development Milestones",
+    title: "Land Development & Site Preparation Underway",
+    description: "Progress continues across the masterplan as the site takes shape ahead of the first phase.",
+    image: "/images/agro-facility.png",
+  },
+  {
+    category: "Announcements",
+    title: "Founding Member Registration Now Open",
+    description: "A limited number of founding memberships are available to early believers in the Zariya vision.",
+    image: "/images/sky-lounge.jpg",
+  },
+  {
+    category: "Upcoming Events",
+    title: "By-Air Sylhet Experience Tour Dates",
+    description: "Join an upcoming guided tour of the land, the lagoon, and Sylhet's most iconic landmarks.",
+    image: "/images/sports-field.png",
+  },
+] as const;
