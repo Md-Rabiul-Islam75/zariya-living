@@ -253,6 +253,72 @@ export const INTEREST_OPTIONS = [
 ] as const;
 
 /* ------------------------------------------------------------------ */
+/* Projects page                                                       */
+/* ------------------------------------------------------------------ */
+
+export const PROJECTS_HERO = {
+  title: "Our Projects",
+  subtitle: "One philosophy. Four landscapes. A lifetime of belonging.",
+  image: "/images/masterplan.png",
+} as const;
+
+export const ALL_PROJECTS = [
+  {
+    name: "Zariya Sylhet Resort & Villas",
+    location: "Nandirgaon, Gowainghat",
+    status: "Active",
+    description:
+      "The flagship. A 5-star resort, organic farm, and private villa community — set against the tea gardens and lagoons of Sylhet. This is where the path begins.",
+    image: "/images/villa-hero.jpg",
+    cta: "View Project",
+    href: "/projects/sylhet",
+  },
+  {
+    name: "Niladri",
+    location: "Tahirpur, Sunamganj",
+    status: "Coming Soon",
+    description:
+      "Where the hills meet the water. Niladri is Zariya's next chapter — a sanctuary nestled into one of Bangladesh's most dramatic natural landscapes.",
+    image: "/images/project-niladri.jpg",
+    cta: "Get Notified",
+    href: "#notify",
+  },
+  {
+    name: "Noakhali",
+    location: "Coconut Groves",
+    status: "Coming Soon",
+    description:
+      "Sun, soil, and the quiet life. Zariya Noakhali will bring the community model to the green calm of the coconut belt.",
+    image: "/images/project-noakhali.jpeg",
+    cta: "Get Notified",
+    href: "#notify",
+  },
+  {
+    name: "Cox's Bazar",
+    location: "Coastal Belt",
+    status: "Coming Soon",
+    description:
+      "Where the world's longest beach meets a community built on values. Cox's Bazar reimagined for the family that wants more than a holiday.",
+    image: "/images/project-coxsbazar.jpg",
+    cta: "Get Notified",
+    href: "#notify",
+  },
+] as const;
+
+export const PROJECTS_EXPANDING = {
+  title: "Zariya Is Expanding.",
+  body: "Every new Zariya project is thoughtfully integrated into its landscape. We do not build everywhere. We build where the land and the community deserve each other.",
+  disclaimer: "All visuals and project descriptions are conceptual representations only and are subject to change.",
+} as const;
+
+export const PROJECTS_NOTIFY = {
+  title: "Be First to Know.",
+  body: "Register your interest for upcoming Zariya projects.",
+  placeholder: "Your email address",
+  cta: "Notify Me About New Projects",
+} as const;
+
+/* ------------------------------------------------------------------ */
 /* Explore page                                                        */
 /* ------------------------------------------------------------------ */
 
