@@ -41,7 +41,7 @@ export function Footer() {
             variants={colVariants}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.4 }}
+            viewport={{ once: false, amount: 0.4 }}
             className="lg:col-span-4"
           >
             <Link href="/" aria-label="Zariya Living — home" className="inline-block">
@@ -73,7 +73,7 @@ export function Footer() {
             variants={colVariants}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.4 }}
+            viewport={{ once: false, amount: 0.4 }}
             className="lg:col-span-2"
           >
             <FooterHeading>Explore</FooterHeading>
@@ -93,7 +93,7 @@ export function Footer() {
             variants={colVariants}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.4 }}
+            viewport={{ once: false, amount: 0.4 }}
             className="lg:col-span-3"
           >
             <FooterHeading>Projects</FooterHeading>
@@ -118,7 +118,7 @@ export function Footer() {
             variants={colVariants}
             initial="hidden"
             whileInView="show"
-            viewport={{ once: true, amount: 0.4 }}
+            viewport={{ once: false, amount: 0.4 }}
             className="lg:col-span-3"
           >
             <FooterHeading>Get in Touch</FooterHeading>

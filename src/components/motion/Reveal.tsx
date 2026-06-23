@@ -33,7 +33,7 @@ export function Reveal({
   delay = 0,
   duration = 0.8,
   className,
-  once = true,
+  once = false,
   amount = 0.3,
 }: {
   children: ReactNode;
@@ -89,7 +89,7 @@ export function Stagger({
       variants={containerVariants}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount }}
+      viewport={{ once: false, amount }}
     >
       {children}
     </motion.div>
