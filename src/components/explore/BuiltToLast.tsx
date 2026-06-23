@@ -1,6 +1,7 @@
 "use client";
 
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
+import { CountUp } from "@/components/ui/CountUp";
 import { EXPLORE_LONGTERM } from "@/lib/site-data";
 
 export function BuiltToLast() {
@@ -28,7 +29,11 @@ export function BuiltToLast() {
             key={stat.label}
             className={`text-center ${i > 0 ? "sm:border-l sm:border-teal-deep/15" : ""}`}
           >
-            <div className="font-serif text-4xl font-light text-teal-deep md:text-5xl">{stat.value}</div>
+            <CountUp
+              value={stat.value}
+              suffix={stat.suffix}
+              className="block font-serif text-4xl font-light text-teal-deep md:text-5xl"
+            />
             <div className="mt-2 text-xs font-medium uppercase tracking-[0.2em] text-gold">{stat.label}</div>
           </StaggerItem>
         ))}

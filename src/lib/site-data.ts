@@ -301,9 +301,9 @@ export const EXPLORE_LONGTERM = {
     "We are not building for today's market. We are building a place your grandchildren will be glad exists.",
   ],
   stats: [
-    { value: "2,100", label: "Decimals of Land" },
-    { value: "100-Year", label: "Vision" },
-    { value: "145", label: "Exclusive Villas" },
+    { value: 2100, suffix: "", label: "Decimals of Land" },
+    { value: 100, suffix: "-Year", label: "Vision" },
+    { value: 145, suffix: "", label: "Exclusive Villas" },
   ],
 } as const;
 
