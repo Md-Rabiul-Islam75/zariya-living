@@ -11,7 +11,7 @@ export function Membership() {
     <section id="membership" className="bg-teal-panel py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <SectionHeading
-          eyebrow="Ownership"
+          eyebrow="Financial Clarity"
           title="Three ways to own a piece of Zariya."
           intro="From a working share of the land to a residence in the community — choose the entry that fits the life you are building."
         />
