@@ -1,10 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { EASE } from "@/lib/easing";
 import { Reveal, Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { MEMBERSHIP, MEMBERSHIP_BENEFITS } from "@/lib/site-data";
+import { MEMBERSHIP } from "@/lib/site-data";
 
 export function Membership() {
   return (
@@ -40,19 +41,23 @@ export function Membership() {
           ))}
         </Stagger>
 
-        {/* Benefits row */}
-        <Reveal direction="up" className="mt-16">
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-4">
-            {MEMBERSHIP_BENEFITS.map((benefit) => (
-              <span
-                key={benefit}
-                className="flex items-center gap-2 text-sm font-light text-foreground/80"
-              >
-                <span className="text-gold">◆</span>
-                {benefit}
-              </span>
-            ))}
+        {/* Guarantee banner */}
+        <Reveal direction="up" className="mt-14">
+          <div className="mx-auto max-w-3xl rounded-xl bg-teal-deep px-6 py-5 text-center ring-1 ring-gold/15">
+            <p className="text-sm font-medium tracking-wide text-foreground md:text-base">
+              100% Money-Back Guarantee. Founder Protection Programme. Your trust is protected.
+            </p>
           </div>
+        </Reveal>
+
+        {/* Link to full Ownership & Income page */}
+        <Reveal direction="up" delay={0.08} className="mt-8 text-center">
+          <Link
+            href="/ownership"
+            className="inline-flex items-center gap-2 border-b border-gold/40 pb-1 text-sm font-light text-gold transition-all hover:gap-3 hover:border-gold"
+          >
+            View Full Ownership &amp; Income Details <span>→</span>
+          </Link>
         </Reveal>
       </div>
     </section>
