@@ -319,6 +319,93 @@ export const PROJECTS_NOTIFY = {
 } as const;
 
 /* ------------------------------------------------------------------ */
+/* Ownership & Income page                                             */
+/* ------------------------------------------------------------------ */
+
+export const OWNERSHIP_HERO = {
+  title: "Ownership & Income",
+  subtitle: "Transparent. Protected. Built to grow.",
+  image: "/images/villa-premium.png",
+} as const;
+
+export const OWNERSHIP_OPTIONS = [
+  {
+    eyebrow: "Option One",
+    title: "Lagoon Villa Share",
+    popular: false,
+    rows: [
+      { label: "Holding", value: "40 sq ft construction + 280 sq ft common land — freehold share" },
+      { label: "The Villa", value: "2,200 sq ft lagoon-front duplex · 4 beds · private infinity pool" },
+    ],
+    note: "Lagoon-front living with resort rental income and a complimentary 2 nights / 3 days annual family stay.",
+  },
+  {
+    eyebrow: "Option Two",
+    title: "Resort Share",
+    popular: true,
+    rows: [
+      { label: "Holding", value: "20 sq ft freehold construction + 100 sq ft common access" },
+      { label: "Income Model", value: "50% of net resort profit shared among shareholders" },
+    ],
+    note: "Earn from year-round resort operations — seasonal demand, corporate bookings, retreats.",
+  },
+  {
+    eyebrow: "Option Three",
+    title: "Agro Share",
+    popular: false,
+    rows: [
+      { label: "Holding", value: "1 decimal freehold organic farmland" },
+      { label: "Benefits", value: "Production income + farm-fresh access + annual resort stay" },
+    ],
+    note: "The most accessible entry into Zariya ownership, with real working land.",
+  },
+] as const;
+
+export const OWNERSHIP_PAYMENT = {
+  title: "A Payment Plan That Respects You.",
+  intro:
+    "No hidden charges. No pressure. A clear, staged plan designed for families planning across borders and currencies.",
+  steps: [
+    { num: "01", title: "Reservation", desc: "Secure your villa or share with a refundable reservation deposit." },
+    { num: "02", title: "Down Payment", desc: "Confirm your ownership with a structured down payment." },
+    { num: "03", title: "Instalments", desc: "Spread the balance across comfortable monthly or quarterly instalments." },
+    { num: "04", title: "Handover & Registration", desc: "Freehold title registered in your name on completion." },
+  ],
+  disclaimer:
+    "Indicative payment structure only. Specific pricing and terms are shared during a private consultation.",
+} as const;
+
+export const OWNERSHIP_COMPARE = {
+  title: "Compare Your Options",
+  columns: ["Feature", "Lagoon Villa", "Resort Share", "Agro Share"],
+  rows: [
+    { feature: "Freehold ownership", values: ["✓ Construction + land", "✓ Construction holding", "✓ Farmland"] },
+    { feature: "Passive income", values: ["Resort rental income", "50% profit share", "Production share"] },
+    { feature: "Resort stay benefit", values: ["Annual 2N / 3D stay", "Member rates", "Annual stay included"] },
+    { feature: "Heritable & resaleable", values: ["✓", "✓", "✓"] },
+    { feature: "Community membership", values: ["✓", "✓", "✓"] },
+  ],
+} as const;
+
+export const OWNERSHIP_TRUST = {
+  eyebrow: "Your Trust, Protected",
+  title: "We Put It in Writing.",
+  cards: [
+    {
+      icon: "guarantee",
+      title: "100% Money-Back Guarantee",
+      desc: "If Zariya cannot deliver on its commitments to you, your investment is returned. We would rather protect your trust than keep your money.",
+    },
+    {
+      icon: "shield",
+      title: "Founder Protection Programme",
+      desc: "Early founding members receive additional safeguards and priority protections — our commitment to those who believed first.",
+    },
+  ],
+  cta: "Request the Full Investment Pack",
+} as const;
+
+/* ------------------------------------------------------------------ */
 /* Explore page                                                        */
 /* ------------------------------------------------------------------ */
 
