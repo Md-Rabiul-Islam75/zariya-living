@@ -6,6 +6,7 @@ import { EASE } from "@/lib/easing";
 import { useState } from "react";
 import { NAV_LINKS, CONTACT, type NavLink } from "@/lib/site-data";
 import { Wordmark } from "@/components/ui/Wordmark";
+import { BookVisitModal } from "@/components/BookVisitModal";
 
 const WHATSAPP_HREF = `https://wa.me/${CONTACT.whatsapp}`;
 
@@ -21,6 +22,7 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [mobileSub, setMobileSub] = useState<string | null>(null);
+  const [bookOpen, setBookOpen] = useState(false);
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -28,6 +30,7 @@ export function Navbar() {
   });
 
   return (
+    <>
     <motion.header
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -63,12 +66,13 @@ export function Navbar() {
             >
               <WhatsAppIcon className="h-5 w-5" />
             </a>
-            <Link
-              href={CONTACT.bookHref}
+            <button
+              type="button"
+              onClick={() => setBookOpen(true)}
               className="rounded-md bg-gold px-6 py-2.5 text-xs font-medium uppercase tracking-[0.15em] text-teal-deep transition-transform duration-300 hover:scale-105"
             >
               Book a Visit
-            </Link>
+            </button>
           </div>
 
           {/* Mobile toggle */}
@@ -146,13 +150,16 @@ export function Navbar() {
 
               {/* Mobile actions */}
               <li className="mt-3 flex items-center gap-3 border-t border-gold/10 pt-4">
-                <Link
-                  href={CONTACT.bookHref}
-                  onClick={() => setOpen(false)}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setOpen(false);
+                    setBookOpen(true);
+                  }}
                   className="rounded-md bg-gold px-6 py-2.5 text-xs font-medium uppercase tracking-[0.15em] text-teal-deep"
                 >
                   Book a Visit
-                </Link>
+                </button>
                 <a
                   href={WHATSAPP_HREF}
                   target="_blank"
@@ -168,6 +175,9 @@ export function Navbar() {
         )}
       </AnimatePresence>
     </motion.header>
+
+    <BookVisitModal open={bookOpen} onClose={() => setBookOpen(false)} />
+    </>
   );
 }
 

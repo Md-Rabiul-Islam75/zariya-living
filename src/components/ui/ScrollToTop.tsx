@@ -36,8 +36,7 @@ export function ScrollToTop() {
           transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.94 }}
-          className="group fixed bottom-6 right-6 z-50 flex items-center justify-center md:bottom-8 md:right-8"
-          style={{ width: 52, height: 52 }}
+          className="group fixed bottom-5 right-5 z-50 flex h-11 w-11 items-center justify-center md:bottom-8 md:right-8 md:h-[52px] md:w-[52px]"
         >
           {/* Backdrop disc */}
           <span className="absolute inset-0 rounded-full border border-gold/20 bg-teal-deep/80 backdrop-blur-md transition-colors duration-300 group-hover:bg-teal-panel/90" />
