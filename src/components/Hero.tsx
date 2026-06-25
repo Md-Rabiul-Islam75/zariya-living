@@ -41,9 +41,10 @@ export function Hero() {
         >
           <source src="/images/coastal.mp4" type="video/mp4" />
         </video>
-        {/* Left-weighted darkening for legible left-aligned text, plus a bottom vignette */}
-        <div className="absolute inset-0 bg-gradient-to-r from-teal-deep/90 via-teal-deep/55 to-teal-deep/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-teal-deep/85 via-transparent to-teal-deep/40" />
+        {/* Lighter overlays so the video shows through; still darker on the left
+            (behind the text) and along the bottom for legibility. */}
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-deep/75 via-teal-deep/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-teal-deep/60 via-transparent to-teal-deep/20" />
       </motion.div>
 
       {/* Content, left aligned */}
@@ -64,7 +65,7 @@ export function Hero() {
             </span>
           </motion.div>
 
-          <h1 className="font-serif text-4xl font-light leading-[1.05] text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
+          <h1 className="font-serif text-4xl font-light leading-[1.05] text-foreground [text-shadow:0_2px_24px_rgba(6,31,31,0.55)] sm:text-6xl md:text-7xl lg:text-8xl">
             {titleLines.map((line, i) => (
               <motion.span
                 key={line}
@@ -83,7 +84,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.95, ease: EASE }}
-            className="mt-5 font-serif text-xl font-light italic leading-snug text-gold sm:mt-7 sm:text-2xl md:text-3xl"
+            className="mt-5 font-serif text-xl font-light italic leading-snug text-gold [text-shadow:0_2px_16px_rgba(6,31,31,0.6)] sm:mt-7 sm:text-2xl md:text-3xl"
           >
             {SITE.hero.tagline}
           </motion.p>
@@ -92,7 +93,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.1, ease: EASE }}
-            className="mt-6 max-w-xl text-base font-light leading-relaxed text-foreground/80 md:text-lg"
+            className="mt-6 max-w-xl text-base font-light leading-relaxed text-foreground/90 [text-shadow:0_1px_12px_rgba(6,31,31,0.6)] md:text-lg"
           >
             {SITE.hero.subtitle}
           </motion.p>
