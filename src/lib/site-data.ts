@@ -319,6 +319,79 @@ export const PROJECTS_NOTIFY = {
 } as const;
 
 /* ------------------------------------------------------------------ */
+/* Township & Amenities page                                           */
+/* ------------------------------------------------------------------ */
+
+export const TOWNSHIP_HERO = {
+  title: "Township & Amenities",
+  subtitle: "Every road, every garden, every sightline — designed around one idea: peace that lasts a hundred years.",
+  image: "/images/masterplan.png",
+} as const;
+
+export const TOWNSHIP_TOWER = {
+  eyebrow: "The Heart of Zariya",
+  title: "The Lotus Tower",
+  image: "/images/lotus-tower.png",
+  paragraphs: [
+    "Rising from the centre of the masterplan, the Lotus Tower is more than a landmark. Inspired by the lotus — a flower that grows in still water and opens toward the light — it is a symbol of everything Zariya stands for: rootedness, renewal, and quiet strength.",
+    "Inside, it houses the Observation Deck, the Sky Lounge, and the resort's most elevated experiences. Visible for miles across the Sylhet landscape, it is the first thing you see as you arrive — and the place you will return to again and again.",
+  ],
+} as const;
+
+export const TOWNSHIP_ZONES = [
+  {
+    icon: "villa",
+    title: "Residential Villas",
+    desc: "145 private lagoon-front villas, set along tree-lined avenues and calm water.",
+  },
+  {
+    icon: "resort",
+    title: "Resort Core",
+    desc: "The Lotus Tower, lobby, dining, wellness, and event venues at the centre.",
+  },
+  {
+    icon: "agro",
+    title: "Agro Belt",
+    desc: "Working organic farmland, orchards, and aquaculture across 2,900 decimals.",
+  },
+  {
+    icon: "buffer",
+    title: "Peace Buffer",
+    desc: "Permanently green protected land surrounding the community, kept untouched.",
+  },
+] as const;
+
+export const TOWNSHIP_INVENTORY = {
+  title: "Ownership Inventory",
+  subtitle: "A limited, deliberately small community. Once they are gone, they are gone.",
+  columns: ["Type", "Size", "Units", "Tenure", "Status"],
+  rows: [
+    { type: "Lagoon Villa Share", size: "2,200 sq ft duplex", units: "Limited", tenure: "Freehold", status: "Limited" },
+    { type: "Resort Share", size: "20 sq ft + common", units: "Limited release", tenure: "Freehold", status: "Available" },
+    { type: "Agro Share", size: "1 decimal", units: "Limited release", tenure: "Freehold", status: "Available" },
+  ],
+  cta: "Enquire About Availability",
+} as const;
+
+export const TOWNSHIP_AMENITIES = {
+  title: "Everything Within Reach",
+  items: [
+    "Mosque",
+    "Swimming Pools",
+    "Sports Complex",
+    "Spa & Sauna",
+    "Yoga Centre",
+    "Kids Zone",
+    "Theatre",
+    "Museums",
+    "Convention Hall",
+    "Banquet Hall",
+    "Business Centre",
+    "Gymnasium",
+  ],
+} as const;
+
+/* ------------------------------------------------------------------ */
 /* Ownership & Income page                                             */
 /* ------------------------------------------------------------------ */
 
