@@ -220,6 +220,20 @@ export const PROJECTS = [
   },
 ] as const;
 
+export const FOUNDER_LETTER = {
+  eyebrow: "You Are Not Alone",
+  title: "Dear Future Zariyan,",
+  image: "/images/founder.png",
+  paragraphs: [
+    "There's a point many of us reach — after the career milestones, the businesses built, the years of quietly holding things together for family — where we realise that more success doesn't answer the question forming inside us.",
+    "Alhamdulillah, we achieved what we once only hoped for. But somewhere along the way, the question shifts. It stops being 'how do I get ahead?' and becomes 'where do I actually belong?'",
+    "Zariya came out of that. This isn't a property project. It is a place where families can slow down, be present with each other, and feel at home — maybe for the first time in a long time.",
+  ],
+  closing: "With gratitude,",
+  name: "Mirza Tanzir Ahmed",
+  role: "Founder, Zariya Living Ltd.",
+} as const;
+
 export const TESTIMONIALS = [
   {
     quote:

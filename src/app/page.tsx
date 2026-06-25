@@ -8,6 +8,7 @@ import { Villas } from "@/components/sections/Villas";
 import { Privileges } from "@/components/sections/Privileges";
 import { Membership } from "@/components/sections/Membership";
 import { Community } from "@/components/sections/Community";
+import { FounderLetter } from "@/components/sections/FounderLetter";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Projects } from "@/components/sections/Projects";
 import { BookVisit } from "@/components/sections/BookVisit";
@@ -27,6 +28,7 @@ export default function Home() {
         <Privileges />
         <Membership />
         <Community />
+        <FounderLetter />
         <Testimonials />
         <Projects />
         <BookVisit />
