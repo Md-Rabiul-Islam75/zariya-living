@@ -17,14 +17,25 @@ export function ProjectsHero() {
 
   return (
     <section ref={ref} className="relative flex h-[85vh] min-h-[560px] w-full items-center justify-center overflow-hidden">
-      <motion.div style={{ y, scale }} className="absolute inset-0">
+      <motion.div style={{ y, scale }} className="absolute inset-0 bg-teal-deep">
+        {/* Blurred fill so the full contained image has no empty bars */}
+        <Image
+          src={PROJECTS_HERO.image}
+          alt=""
+          aria-hidden
+          fill
+          priority
+          sizes="100vw"
+          className="scale-110 object-cover opacity-60 blur-2xl"
+        />
+        {/* The complete masterplan, never cropped */}
         <Image
           src={PROJECTS_HERO.image}
           alt="Zariya masterplan"
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-contain"
         />
         <div className="absolute inset-0 bg-teal-deep/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-teal-deep/90 via-transparent to-teal-deep/50" />
