@@ -319,6 +319,67 @@ export const PROJECTS_NOTIFY = {
 } as const;
 
 /* ------------------------------------------------------------------ */
+/* Community page                                                      */
+/* ------------------------------------------------------------------ */
+
+export const COMMUNITY_HERO = {
+  eyebrow: "Zariyans' Global Community",
+  title: "You Don't Just Own Here. You Belong Here.",
+  image: "/images/community-hands.png",
+} as const;
+
+export const COMMUNITY_INTRO = {
+  title: "A Community Bound by Values, Not Just Geography.",
+  paragraphs: [
+    "The Zariyans' Global Community is a network of non-resident Bangladeshi families, professionals, and retirees who share a vision of what home should feel like. Spread across continents, united by the same longing — to belong somewhere real.",
+    "When you own at Zariya, you join this community automatically. It is not a loyalty programme. It is a circle of people who understand the journey you have been on, because they have been on it too.",
+  ],
+} as const;
+
+export const COMMUNITY_MEMBERSHIP = {
+  title: "What Membership Means",
+  cards: [
+    {
+      title: "A Place to Gather",
+      desc: "Community villas, shared spaces, and a calendar of gatherings — from Eid celebrations to family retreats — where Zariyans connect across generations.",
+    },
+    {
+      title: "A Network That Cares",
+      desc: "A trusted circle for advice, partnership, and friendship — people who understand the realities of building a life across two countries.",
+    },
+    {
+      title: "A Legacy to Share",
+      desc: "A community your children inherit — not just property, but belonging. Roots that hold even as the family grows and scatters across the world.",
+    },
+  ],
+} as const;
+
+export const COMMUNITY_STORIES = {
+  title: "Stories from Zariyans",
+  items: [
+    {
+      quote: "After 30 years abroad, I wanted my grandchildren to know where they come from. Zariya gave us a reason to come back together.",
+      author: "Retiree, Toronto",
+    },
+    {
+      quote: "It is the only investment I have made that my whole family is excited about. That tells you something.",
+      author: "Professional, Dubai",
+    },
+    {
+      quote: "I came to see land. I left having found a community. That was unexpected, and it was everything.",
+      author: "Founding Member, Manchester",
+    },
+  ],
+} as const;
+
+export const COMMUNITY_JOIN = {
+  title: "Join the Zariyans.",
+  body: "Register your interest and our team will share how to become part of the community.",
+  placeholder: "Your email address",
+  cta: "Request to Join",
+} as const;
+
+/* ------------------------------------------------------------------ */
 /* Township & Amenities page                                           */
 /* ------------------------------------------------------------------ */
 
