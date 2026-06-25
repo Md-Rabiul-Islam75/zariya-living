@@ -4,8 +4,9 @@
   /* Zariya brand palette */
   --background: #092c2c; /* deep teal */
   --foreground: #f4ede4; /* warm cream text */
-  --gold: #dfc1a5; /* gold / champagne accent */
+  --gold: #dfc1a5; /* gold / champagne accent (for dark backgrounds) */
   --gold-soft: #c9a988;
+  --gold-deep: #9c7647; /* deeper gold for accents on light/white backgrounds */
   --teal-deep: #061f1f;
   --teal-panel: #0d3838;
   --muted: #9bb0ad;
@@ -16,6 +17,7 @@
   --color-foreground: var(--foreground);
   --color-gold: var(--gold);
   --color-gold-soft: var(--gold-soft);
+  --color-gold-deep: var(--gold-deep);
   --color-teal-deep: var(--teal-deep);
   --color-teal-panel: var(--teal-panel);
   --color-muted: var(--muted);

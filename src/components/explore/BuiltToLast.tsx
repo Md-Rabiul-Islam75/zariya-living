@@ -17,7 +17,7 @@ export function BuiltToLast() {
         <div className="mt-10 space-y-6">
           {EXPLORE_LONGTERM.paragraphs.map((p, i) => (
             <Reveal key={i} direction="up" delay={0.06 * (i + 1)}>
-              <p className="text-base font-light leading-relaxed text-teal-deep/65 md:text-lg">{p}</p>
+              <p className="text-base font-normal leading-relaxed text-teal-deep/80 md:text-lg">{p}</p>
             </Reveal>
           ))}
         </div>
@@ -34,7 +34,7 @@ export function BuiltToLast() {
               suffix={stat.suffix}
               className="block font-serif text-4xl font-light text-teal-deep md:text-5xl"
             />
-            <div className="mt-2 text-xs font-medium uppercase tracking-[0.2em] text-gold">{stat.label}</div>
+            <div className="mt-2 text-xs font-semibold uppercase tracking-[0.2em] text-gold-deep">{stat.label}</div>
           </StaggerItem>
         ))}
       </Stagger>

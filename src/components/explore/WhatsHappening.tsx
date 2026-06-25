@@ -34,11 +34,11 @@ export function WhatsHappening() {
                   />
                 </div>
                 <div className="flex flex-1 flex-col p-7">
-                  <span className="text-[11px] font-medium uppercase tracking-[0.2em] text-gold">
+                  <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gold-deep">
                     {item.category}
                   </span>
                   <h3 className="mt-3 font-serif text-xl font-light leading-snug text-teal-deep">{item.title}</h3>
-                  <p className="mt-3 flex-1 text-sm font-light leading-relaxed text-teal-deep/65">
+                  <p className="mt-3 flex-1 text-sm font-normal leading-relaxed text-teal-deep/80">
                     {item.description}
                   </p>
                   <button

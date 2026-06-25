@@ -28,7 +28,7 @@ export function VoicesFromPath() {
                     &ldquo;{voice.quote}&rdquo;
                   </p>
                 </blockquote>
-                <figcaption className="mt-6 text-xs font-medium uppercase tracking-[0.2em] text-gold">
+                <figcaption className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-gold-deep">
                   — {voice.author}
                 </figcaption>
               </motion.figure>

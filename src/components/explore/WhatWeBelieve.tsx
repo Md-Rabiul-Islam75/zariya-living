@@ -24,8 +24,8 @@ export function WhatWeBelieve() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal direction="up">
           <div className="mb-4 flex items-center gap-4">
-            <span className="h-px w-10 bg-gold" />
-            <span className="text-xs font-medium uppercase tracking-[0.3em] text-gold">What We Believe</span>
+            <span className="h-px w-10 bg-gold-deep" />
+            <span className="text-xs font-semibold uppercase tracking-[0.3em] text-gold-deep">What We Believe</span>
           </div>
         </Reveal>
         <Reveal direction="up" delay={0.05}>
@@ -53,7 +53,7 @@ export function WhatWeBelieve() {
                   {ICONS[belief.icon]}
                 </svg>
                 <h3 className="mt-6 font-serif text-2xl font-light text-teal-deep">{belief.title}</h3>
-                <p className="mt-4 text-sm font-light leading-relaxed text-teal-deep/65">{belief.description}</p>
+                <p className="mt-4 text-[15px] font-normal leading-relaxed text-teal-deep/80">{belief.description}</p>
               </div>
             </StaggerItem>
           ))}
