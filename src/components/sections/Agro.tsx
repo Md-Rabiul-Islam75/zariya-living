@@ -13,7 +13,7 @@ export function Agro() {
         <SectionHeading
           eyebrow="Zariya Agro"
           title="Food grown beside where you live."
-          intro="Vegetables and fruit grown without synthetic chemicals, harvested at peak ripeness and on your table within hours — a working farm at the centre of everyday life."
+          intro="Vegetables and fruit grown without synthetic chemicals, harvested at peak ripeness and on your table within hours, a working farm at the centre of everyday life."
         />
 
         <div className="mt-20 flex flex-col gap-20 md:gap-28">

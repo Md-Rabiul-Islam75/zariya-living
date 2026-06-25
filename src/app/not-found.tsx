@@ -66,7 +66,7 @@ export default function NotFound() {
           transition={{ duration: 1, delay: 0.5, ease: EASE }}
           className="mt-6 max-w-md text-base font-light leading-relaxed text-foreground/75 md:text-lg"
         >
-          This path leads nowhere — but the journey at Zariya is just beginning.
+          This path leads nowhere, but the journey at Zariya is just beginning.
           Let us guide you back.
         </motion.p>
 

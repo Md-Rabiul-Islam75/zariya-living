@@ -18,7 +18,7 @@ export function Community() {
       <motion.div style={{ scale }} className="absolute inset-0">
         <Image
           src="/images/community-hands.png"
-          alt="A circle of hands — the Zariya community"
+          alt="A circle of hands, the Zariya community"
           fill
           sizes="100vw"
           className="object-cover"
@@ -40,7 +40,7 @@ export function Community() {
         <Reveal direction="up" delay={0.12}>
           <p className="mt-6 text-lg font-light leading-relaxed text-foreground/80">
             Zariya is not a list of properties. It is a circle of families who chose to build a life close to
-            nature, and to each other — a global community with founding members at its heart.
+            nature, and to each other, a global community with founding members at its heart.
           </p>
         </Reveal>
         <Reveal direction="up" delay={0.2}>

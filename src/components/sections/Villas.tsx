@@ -14,7 +14,7 @@ export function Villas() {
         <SectionHeading
           eyebrow="Lagoon Villa Community"
           title="Where you rest."
-          intro="Architect-designed villas wrapped around a private lagoon. No decision should be made without standing on the land — but this is the life that waits."
+          intro="Architect-designed villas wrapped around a private lagoon. No decision should be made without standing on the land, but this is the life that waits."
         />
 
         <Stagger className="mt-16 grid auto-rows-[280px] grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[320px]">

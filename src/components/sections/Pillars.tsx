@@ -15,7 +15,7 @@ export function Pillars() {
         <SectionHeading
           eyebrow="The Ecosystem"
           title="One philosophy. Three ways to belong."
-          intro="Resort, farm, and home — each complete on its own, each richer because of the others."
+          intro="Resort, farm, and home, each complete on its own, each richer because of the others."
         />
 
         <Stagger className="mt-16 grid gap-7 md:grid-cols-3">

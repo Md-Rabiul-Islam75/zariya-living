@@ -35,13 +35,13 @@ export function Resort() {
             </Reveal>
             <Reveal direction="up" delay={0.05}>
               <h2 className="font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl md:text-5xl">
-                The Lotus Tower — the heart of everything Zariya offers.
+                The Lotus Tower, the heart of everything Zariya offers.
               </h2>
             </Reveal>
             <Reveal direction="up" delay={0.12}>
               <p className="mt-6 text-lg font-light leading-relaxed text-foreground/75">
                 At the centre of it all stands an iconic landmark visible for miles. Observation decks, a sky
-                lounge, theatres, museums, and dining that draws from the farm next door — full facility access
+                lounge, theatres, museums, and dining that draws from the farm next door, full facility access
                 for an active family life.
               </p>
             </Reveal>

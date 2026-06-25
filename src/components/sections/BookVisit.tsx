@@ -37,7 +37,7 @@ export function BookVisit() {
           <Reveal direction="up" delay={0.12}>
             <p className="mt-6 max-w-md text-lg font-light leading-relaxed text-foreground/75">
               No decision should be made without standing on the land. Book a guided visit, schedule a private
-              call, or request the investment pack — and we&apos;ll take it from there.
+              call, or request the investment pack, and we&apos;ll take it from there.
             </p>
           </Reveal>
           <Reveal direction="up" delay={0.18}>

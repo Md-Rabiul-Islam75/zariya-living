@@ -8,7 +8,7 @@ import { COMMUNITY_JOIN } from "@/lib/site-data";
 export function JoinZariyans() {
   const [sent, setSent] = useState(false);
 
-  // Static for now — wire to an API route / CRM when going dynamic.
+  // Static for now, wire to an API route / CRM when going dynamic.
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSent(true);
@@ -39,7 +39,7 @@ export function JoinZariyans() {
                   <span className="flex h-6 w-6 items-center justify-center rounded-full border border-gold-deep text-xs text-gold-deep">
                     ✓
                   </span>
-                  Request received — welcome to the journey. We&apos;ll be in touch.
+                  Request received, welcome to the journey. We&apos;ll be in touch.
                 </motion.p>
               ) : (
                 <motion.form

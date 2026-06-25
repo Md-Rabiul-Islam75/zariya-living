@@ -25,7 +25,7 @@ function getOffset(direction: Direction) {
 
 /**
  * Scroll-triggered reveal. Fades + eases an element into place the first time
- * it enters the viewport — the core motion gesture used across the site.
+ * it enters the viewport, the core motion gesture used across the site.
  */
 export function Reveal({
   children,

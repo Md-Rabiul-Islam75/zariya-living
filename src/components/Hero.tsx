@@ -46,7 +46,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-t from-teal-deep/85 via-transparent to-teal-deep/40" />
       </motion.div>
 
-      {/* Content — left aligned */}
+      {/* Content, left aligned */}
       <motion.div
         style={{ opacity }}
         className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-center px-6 lg:px-10"
@@ -119,7 +119,7 @@ export function Hero() {
         </div>
       </motion.div>
 
-      {/* Scroll indicator — centered, larger */}
+      {/* Scroll indicator, centered, larger */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

@@ -20,7 +20,7 @@ export function Philosophy() {
           </Reveal>
           <Reveal direction="up" delay={0.12}>
             <p className="mt-6 text-lg font-light leading-relaxed text-foreground/75">
-              For centuries, Sylhet has been known as the land of the 360 Auliyas — saints who carried the
+              For centuries, Sylhet has been known as the land of the 360 Auliyas, saints who carried the
               light of peace, faith, and healing into Bengal. This sacred place was never just a destination.
               It was always a path.
             </p>
@@ -35,7 +35,7 @@ export function Philosophy() {
           </Reveal>
           <Reveal direction="up" delay={0.22}>
             <p className="mt-4 text-lg font-light leading-relaxed text-foreground/75">
-              Zariya came out of that longing. The name means &lsquo;The Path&rsquo; — a path that reconnects
+              Zariya came out of that longing. The name means &lsquo;The Path&rsquo;, a path that reconnects
               you with faith, nature, belonging, and the version of yourself you set aside somewhere along the
               way.
             </p>

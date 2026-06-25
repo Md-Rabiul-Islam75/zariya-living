@@ -44,7 +44,7 @@ export function Footer() {
             viewport={{ once: false, amount: 0.4 }}
             className="lg:col-span-4"
           >
-            <Link href="/" aria-label="Zariya Living — home" className="inline-block">
+            <Link href="/" aria-label="Zariya Living, home" className="inline-block">
               <Wordmark size="lg" />
             </Link>
             <p className="mt-6 max-w-xs font-serif text-lg font-light italic leading-relaxed text-foreground/70">
@@ -200,7 +200,7 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
 function FooterContactForm() {
   const [sent, setSent] = useState(false);
 
-  // Static for now — wire to an API route / CRM when going dynamic.
+  // Static for now, wire to an API route / CRM when going dynamic.
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSent(true);
@@ -217,7 +217,7 @@ function FooterContactForm() {
             className="flex items-center gap-2 text-sm font-light text-gold"
           >
             <span className="flex h-6 w-6 items-center justify-center rounded-full border border-gold text-xs">✓</span>
-            Message sent — we&apos;ll be in touch.
+            Message sent, we&apos;ll be in touch.
           </motion.p>
         ) : (
           <motion.form

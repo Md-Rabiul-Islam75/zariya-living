@@ -14,7 +14,7 @@ export function Membership() {
         <SectionHeading
           eyebrow="Financial Clarity"
           title="Three ways to own a piece of Zariya."
-          intro="From a working share of the land to a residence in the community — choose the entry that fits the life you are building."
+          intro="From a working share of the land to a residence in the community, choose the entry that fits the life you are building."
         />
 
         <Stagger className="mt-16 grid gap-7 md:grid-cols-3">

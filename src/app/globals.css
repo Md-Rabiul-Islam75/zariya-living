@@ -22,14 +22,16 @@
   --color-teal-panel: var(--teal-panel);
   --color-muted: var(--muted);
 
+  /* Single typeface across the whole site (serif). --font-sans maps to the
+     serif too so any `font-sans` utility stays consistent. */
   --font-serif: var(--font-cormorant);
-  --font-sans: var(--font-jost);
+  --font-sans: var(--font-cormorant);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
 }
 
 h1,

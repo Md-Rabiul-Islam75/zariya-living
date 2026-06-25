@@ -9,7 +9,7 @@ export const SITE = {
     title: "Where Do I Truly\nBelong?",
     tagline: "A Peaceful Return to Nature, Belonging & Yourself",
     subtitle:
-      "Zariya is a faith-aligned, nature-rooted community in the heart of Sylhet — built for people who have worked hard and are ready to come home.",
+      "Zariya is a faith-aligned, nature-rooted community in the heart of Sylhet, built for people who have worked hard and are ready to come home.",
     primaryCta: "Book a Visit",
     secondaryCta: "Explore the Path",
   },
@@ -17,7 +17,7 @@ export const SITE = {
 
 // Contact details. Replace placeholders with the real values.
 export const CONTACT = {
-  whatsapp: "8801907070640", // international format, no '+' — used in wa.me links
+  whatsapp: "8801907070640", // international format, no '+', used in wa.me links
   phone: "+880 1907 070640-43",
   email: "info@zariyaliving.com",
   address: "32 Sonargaon Janapath Road, Sector 12, Uttara, Dhaka 1230, Bangladesh",
@@ -36,24 +36,25 @@ export const LEGAL_LINKS = [
   { label: "Legal & Disclosures", href: "/legal" },
 ] as const;
 
+export type NavChild = { label: string; href: string; soon?: boolean };
 export type NavLink = {
   label: string;
   href: string;
-  children?: { label: string; href: string }[];
+  children?: NavChild[];
 };
 
-// Routes for pages we'll build out individually. For now they point at the
-// (not-yet-built) page paths — the branded 404 covers them until then.
+// Only the flagship Sylhet project page exists; the rest are marked "soon"
+// (shown but not clickable in the dropdown).
 export const NAV_LINKS: NavLink[] = [
   { label: "Explore", href: "/explore" },
   {
     label: "Projects",
     href: "/projects",
     children: [
-      { label: "Flagship — Sylhet", href: "/projects/sylhet" },
-      { label: "Niladri", href: "/projects/niladri" },
-      { label: "Noakhali", href: "/projects/noakhali" },
-      { label: "Cox's Bazar", href: "/projects/coxs-bazar" },
+      { label: "Flagship, Sylhet", href: "/projects/sylhet" },
+      { label: "Niladri", href: "/projects/niladri", soon: true },
+      { label: "Noakhali", href: "/projects/noakhali", soon: true },
+      { label: "Cox's Bazar", href: "/projects/coxs-bazar", soon: true },
     ],
   },
   { label: "Ownership & Income", href: "/ownership" },
@@ -68,7 +69,7 @@ export const PILLARS = [
     eyebrow: "Hospitality",
     title: "Zariya Resort",
     description:
-      "A flagship hospitality landmark crowned by the Lotus Tower — observation decks, sky lounges, fine dining, and wellness, all visible for miles.",
+      "A flagship hospitality landmark crowned by the Lotus Tower, observation decks, sky lounges, fine dining, and wellness, all visible for miles.",
     image: "/images/lotus-tower.png",
     cta: "Explore the Resort",
   },
@@ -77,7 +78,7 @@ export const PILLARS = [
     eyebrow: "Organic Farm",
     title: "Zariya Agro",
     description:
-      "Chemical-free produce, orchards, livestock, and fisheries — a working farm that feeds the community, the resort, and premium export channels.",
+      "Chemical-free produce, orchards, livestock, and fisheries, a working farm that feeds the community, the resort, and premium export channels.",
     image: "/images/agro-overview.png",
     cta: "Explore the Farm",
   },
@@ -86,7 +87,7 @@ export const PILLARS = [
     eyebrow: "Residences",
     title: "Lagoon Villa Community",
     description:
-      "Architect-designed villas wrapped around a private lagoon — a community of owners who chose to live close to nature, and to each other.",
+      "Architect-designed villas wrapped around a private lagoon, a community of owners who chose to live close to nature, and to each other.",
     image: "/images/villa-community.png",
     cta: "Explore the Villas",
   },
@@ -156,7 +157,7 @@ export const MEMBERSHIP_PRIVILEGES = [
   {
     category: "Sports & Recreation",
     title: "Active Family Living",
-    description: "Up to 80% off sports facilities — wellness and recreation for the whole family.",
+    description: "Up to 80% off sports facilities, wellness and recreation for the whole family.",
   },
   {
     category: "Future Ownership",
@@ -168,14 +169,14 @@ export const MEMBERSHIP_PRIVILEGES = [
     category: "Global Community",
     title: "Founding Member Status",
     description:
-      "A global network of NRBs, professionals, and families — with founding-member recognition.",
+      "A global network of NRBs, professionals, and families, with founding-member recognition.",
   },
 ] as const;
 
 export const MEMBERSHIP = [
   {
     title: "Lagoon Villa Share",
-    description: "The most complete entry into Zariya ownership — a residence and a stake in the community.",
+    description: "The most complete entry into Zariya ownership, a residence and a stake in the community.",
   },
   {
     title: "Resort Share",
@@ -201,7 +202,7 @@ export const PROJECTS = [
     name: "Niladri",
     location: "Sunamganj, Sylhet",
     status: "Coming Soon",
-    description: "Where turquoise water meets the hills — the community model set against Sylhet's most iconic landscape.",
+    description: "Where turquoise water meets the hills, the community model set against Sylhet's most iconic landscape.",
     image: "/images/project-niladri.jpg",
   },
   {
@@ -215,7 +216,7 @@ export const PROJECTS = [
     name: "Cox's Bazar",
     location: "Coastal Belt",
     status: "Coming Soon",
-    description: "Where the world's longest beach meets a community built on values — reimagined for the family that wants more.",
+    description: "Where the world's longest beach meets a community built on values, reimagined for the family that wants more.",
     image: "/images/project-coxsbazar.jpg",
   },
 ] as const;
@@ -225,9 +226,9 @@ export const FOUNDER_LETTER = {
   title: "Dear Future Zariyan,",
   image: "/images/founder.png",
   paragraphs: [
-    "There's a point many of us reach — after the career milestones, the businesses built, the years of quietly holding things together for family — where we realise that more success doesn't answer the question forming inside us.",
+    "There's a point many of us reach, after the career milestones, the businesses built, the years of quietly holding things together for family, where we realise that more success doesn't answer the question forming inside us.",
     "Alhamdulillah, we achieved what we once only hoped for. But somewhere along the way, the question shifts. It stops being 'how do I get ahead?' and becomes 'where do I actually belong?'",
-    "Zariya came out of that. This isn't a property project. It is a place where families can slow down, be present with each other, and feel at home — maybe for the first time in a long time.",
+    "Zariya came out of that. This isn't a property project. It is a place where families can slow down, be present with each other, and feel at home, maybe for the first time in a long time.",
   ],
   closing: "With gratitude,",
   name: "Mirza Tanzir Ahmed",
@@ -237,7 +238,7 @@ export const FOUNDER_LETTER = {
 export const TESTIMONIALS = [
   {
     quote:
-      "My children grew up speaking another language, in another country. Zariya is the first place that feels like ours — somewhere they can finally call home.",
+      "My children grew up speaking another language, in another country. Zariya is the first place that feels like ours, somewhere they can finally call home.",
     name: "Mirza Tanzir Ahmed",
     role: "Entrepreneur",
     location: "London",
@@ -251,7 +252,7 @@ export const TESTIMONIALS = [
   },
   {
     quote:
-      "What sold me wasn't the returns — it was sitting at Fajr and realising my grandchildren could one day pray on the same ground. That kind of belonging is rare.",
+      "What sold me wasn't the returns, it was sitting at Fajr and realising my grandchildren could one day pray on the same ground. That kind of belonging is rare.",
     name: "Farzana Karim",
     role: "Founding Member",
     location: "Sydney",
@@ -282,7 +283,7 @@ export const ALL_PROJECTS = [
     location: "Nandirgaon, Gowainghat",
     status: "Active",
     description:
-      "The flagship. A 5-star resort, organic farm, and private villa community — set against the tea gardens and lagoons of Sylhet. This is where the path begins.",
+      "The flagship. A 5-star resort, organic farm, and private villa community, set against the tea gardens and lagoons of Sylhet. This is where the path begins.",
     image: "/images/villa-hero.jpg",
     cta: "View Project",
     href: "/projects/sylhet",
@@ -292,7 +293,7 @@ export const ALL_PROJECTS = [
     location: "Tahirpur, Sunamganj",
     status: "Coming Soon",
     description:
-      "Where the hills meet the water. Niladri is Zariya's next chapter — a sanctuary nestled into one of Bangladesh's most dramatic natural landscapes.",
+      "Where the hills meet the water. Niladri is Zariya's next chapter, a sanctuary nestled into one of Bangladesh's most dramatic natural landscapes.",
     image: "/images/project-niladri.jpg",
     cta: "Get Notified",
     href: "#notify",
@@ -346,11 +347,11 @@ export const VISIT_TOUR = {
   eyebrow: "The By-Air Experience Tour",
   title: "A Complimentary Journey, on Us.",
   image: "/images/sky-lounge.jpg",
-  body: "Confirmed bookings include a complimentary By-Air Sylhet Experience Tour. We fly you in, host you at the land, walk you through the masterplan, and show you the Sylhet that inspired Zariya — its shrines, its tea gardens, its quiet beauty.",
+  body: "Confirmed bookings include a complimentary By-Air Sylhet Experience Tour. We fly you in, host you at the land, walk you through the masterplan, and show you the Sylhet that inspired Zariya, its shrines, its tea gardens, its quiet beauty.",
   points: [
     "Guided walk of the masterplan and the Lotus Tower site",
     "A taste of Zariya Agro's farm-fresh hospitality",
-    "A private consultation — no pressure, just clarity",
+    "A private consultation, no pressure, just clarity",
   ],
 } as const;
 
@@ -373,11 +374,11 @@ export const VISIT_FAQ = {
   items: [
     {
       q: "Is the land genuinely freehold and registered in my name?",
-      a: "Yes. Every Zariya holding — villa, resort, or agro share — is freehold and registered in your name on completion. You receive a legal title deed, and your ownership is heritable and resaleable.",
+      a: "Yes. Every Zariya holding, villa, resort, or agro share, is freehold and registered in your name on completion. You receive a legal title deed, and your ownership is heritable and resaleable.",
     },
     {
       q: "How does the income from a Resort Share actually work?",
-      a: "Resort Shares earn from year-round resort operations — seasonal stays, corporate bookings, and retreats. Shareholders receive 50% of the net resort profit, distributed on a defined schedule.",
+      a: "Resort Shares earn from year-round resort operations, seasonal stays, corporate bookings, and retreats. Shareholders receive 50% of the net resort profit, distributed on a defined schedule.",
     },
     {
       q: "What does the money-back guarantee cover?",
@@ -399,7 +400,7 @@ export const COMMUNITY_HERO = {
 export const COMMUNITY_INTRO = {
   title: "A Community Bound by Values, Not Just Geography.",
   paragraphs: [
-    "The Zariyans' Global Community is a network of non-resident Bangladeshi families, professionals, and retirees who share a vision of what home should feel like. Spread across continents, united by the same longing — to belong somewhere real.",
+    "The Zariyans' Global Community is a network of non-resident Bangladeshi families, professionals, and retirees who share a vision of what home should feel like. Spread across continents, united by the same longing, to belong somewhere real.",
     "When you own at Zariya, you join this community automatically. It is not a loyalty programme. It is a circle of people who understand the journey you have been on, because they have been on it too.",
   ],
 } as const;
@@ -409,15 +410,15 @@ export const COMMUNITY_MEMBERSHIP = {
   cards: [
     {
       title: "A Place to Gather",
-      desc: "Community villas, shared spaces, and a calendar of gatherings — from Eid celebrations to family retreats — where Zariyans connect across generations.",
+      desc: "Community villas, shared spaces, and a calendar of gatherings, from Eid celebrations to family retreats, where Zariyans connect across generations.",
     },
     {
       title: "A Network That Cares",
-      desc: "A trusted circle for advice, partnership, and friendship — people who understand the realities of building a life across two countries.",
+      desc: "A trusted circle for advice, partnership, and friendship, people who understand the realities of building a life across two countries.",
     },
     {
       title: "A Legacy to Share",
-      desc: "A community your children inherit — not just property, but belonging. Roots that hold even as the family grows and scatters across the world.",
+      desc: "A community your children inherit, not just property, but belonging. Roots that hold even as the family grows and scatters across the world.",
     },
   ],
 } as const;
@@ -453,7 +454,7 @@ export const COMMUNITY_JOIN = {
 
 export const TOWNSHIP_HERO = {
   title: "Township & Amenities",
-  subtitle: "Every road, every garden, every sightline — designed around one idea: peace that lasts a hundred years.",
+  subtitle: "Every road, every garden, every sightline, designed around one idea: peace that lasts a hundred years.",
   image: "/images/masterplan.png",
 } as const;
 
@@ -462,8 +463,8 @@ export const TOWNSHIP_TOWER = {
   title: "The Lotus Tower",
   image: "/images/lotus-tower.png",
   paragraphs: [
-    "Rising from the centre of the masterplan, the Lotus Tower is more than a landmark. Inspired by the lotus — a flower that grows in still water and opens toward the light — it is a symbol of everything Zariya stands for: rootedness, renewal, and quiet strength.",
-    "Inside, it houses the Observation Deck, the Sky Lounge, and the resort's most elevated experiences. Visible for miles across the Sylhet landscape, it is the first thing you see as you arrive — and the place you will return to again and again.",
+    "Rising from the centre of the masterplan, the Lotus Tower is more than a landmark. Inspired by the lotus, a flower that grows in still water and opens toward the light, it is a symbol of everything Zariya stands for: rootedness, renewal, and quiet strength.",
+    "Inside, it houses the Observation Deck, the Sky Lounge, and the resort's most elevated experiences. Visible for miles across the Sylhet landscape, it is the first thing you see as you arrive, and the place you will return to again and again.",
   ],
 } as const;
 
@@ -536,7 +537,7 @@ export const OWNERSHIP_OPTIONS = [
     title: "Lagoon Villa Share",
     popular: false,
     rows: [
-      { label: "Holding", value: "40 sq ft construction + 280 sq ft common land — freehold share" },
+      { label: "Holding", value: "40 sq ft construction + 280 sq ft common land, freehold share" },
       { label: "The Villa", value: "2,200 sq ft lagoon-front duplex · 4 beds · private infinity pool" },
     ],
     note: "Lagoon-front living with resort rental income and a complimentary 2 nights / 3 days annual family stay.",
@@ -549,7 +550,7 @@ export const OWNERSHIP_OPTIONS = [
       { label: "Holding", value: "20 sq ft freehold construction + 100 sq ft common access" },
       { label: "Income Model", value: "50% of net resort profit shared among shareholders" },
     ],
-    note: "Earn from year-round resort operations — seasonal demand, corporate bookings, retreats.",
+    note: "Earn from year-round resort operations, seasonal demand, corporate bookings, retreats.",
   },
   {
     eyebrow: "Option Three",
@@ -601,7 +602,7 @@ export const OWNERSHIP_TRUST = {
     {
       icon: "shield",
       title: "Founder Protection Programme",
-      desc: "Early founding members receive additional safeguards and priority protections — our commitment to those who believed first.",
+      desc: "Early founding members receive additional safeguards and priority protections, our commitment to those who believed first.",
     },
   ],
   cta: "Request the Full Investment Pack",
@@ -629,7 +630,7 @@ export const EXPLORE_BELIEFS = [
     icon: "nature",
     title: "Nature",
     description:
-      "We believe humans belong in nature. The overcrowded city, the noise, the screen — these were never meant to be permanent. Zariya returns you to open skies, green land, and mornings that begin with birdsong, not traffic.",
+      "We believe humans belong in nature. The overcrowded city, the noise, the screen, these were never meant to be permanent. Zariya returns you to open skies, green land, and mornings that begin with birdsong, not traffic.",
   },
   {
     icon: "legacy",
@@ -642,9 +643,9 @@ export const EXPLORE_BELIEFS = [
 export const EXPLORE_PATH = {
   title: "'Zariya' Means The Path.",
   paragraphs: [
-    "Sylhet has always been a place of spiritual significance. The 360 Auliyas who walked this land centuries ago left behind more than mosques and shrines — they left a culture of faith, community, and inner peace that this soil still carries.",
+    "Sylhet has always been a place of spiritual significance. The 360 Auliyas who walked this land centuries ago left behind more than mosques and shrines, they left a culture of faith, community, and inner peace that this soil still carries.",
     "When we chose the name Zariya, we were not looking for something poetic. We were looking for something true. The Path is not just where you walk. It is how you live.",
-    "Zariya is our attempt to build a community worthy of that name — where the environment itself encourages you to slow down, reflect, and reconnect with what matters.",
+    "Zariya is our attempt to build a community worthy of that name, where the environment itself encourages you to slow down, reflect, and reconnect with what matters.",
   ],
 } as const;
 
@@ -652,7 +653,7 @@ export const EXPLORE_LONGTERM = {
   title: "Built to Last 100 Years.",
   paragraphs: [
     "Most property developments think in decades. Zariya thinks in generations.",
-    "The masterplan is designed with a peace buffer — land kept permanently green to protect the community from future encroachment. The agro ecosystem is designed for long-term sustainability. The Lagoon Villas are freehold, heritable, and resaleable.",
+    "The masterplan is designed with a peace buffer, land kept permanently green to protect the community from future encroachment. The agro ecosystem is designed for long-term sustainability. The Lagoon Villas are freehold, heritable, and resaleable.",
     "We are not building for today's market. We are building a place your grandchildren will be glad exists.",
   ],
   stats: [

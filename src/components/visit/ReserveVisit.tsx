@@ -8,7 +8,7 @@ import { VISIT_FORM } from "@/lib/site-data";
 export function ReserveVisit() {
   const [submitted, setSubmitted] = useState(false);
 
-  // Static for now — wire to an API route / CRM when going dynamic.
+  // Static for now, wire to an API route / CRM when going dynamic.
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSubmitted(true);

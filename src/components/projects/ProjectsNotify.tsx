@@ -8,7 +8,7 @@ import { PROJECTS_NOTIFY } from "@/lib/site-data";
 export function ProjectsNotify() {
   const [sent, setSent] = useState(false);
 
-  // Static for now — wire to an API route / CRM when going dynamic.
+  // Static for now, wire to an API route / CRM when going dynamic.
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSent(true);
@@ -42,7 +42,7 @@ export function ProjectsNotify() {
                   className="flex items-center justify-center gap-2 text-sm font-light text-gold"
                 >
                   <span className="flex h-6 w-6 items-center justify-center rounded-full border border-gold text-xs">✓</span>
-                  You&apos;re on the list — we&apos;ll be in touch about new projects.
+                  You&apos;re on the list, we&apos;ll be in touch about new projects.
                 </motion.p>
               ) : (
                 <motion.form

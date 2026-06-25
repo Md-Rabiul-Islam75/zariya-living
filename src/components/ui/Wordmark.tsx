@@ -1,5 +1,5 @@
 /**
- * Text-based Zariya wordmark — used in the navbar and footer so the logo stays
+ * Text-based Zariya wordmark, used in the navbar and footer so the logo stays
  * crisp on the dark teal background (the PNG logo blends into it).
  *
  *   ZARIYA

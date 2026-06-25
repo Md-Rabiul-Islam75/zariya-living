@@ -12,7 +12,7 @@ export function Privileges() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal direction="up" className="text-center">
           <span className="text-xs font-medium uppercase tracking-[0.3em] text-gold">
-            Global Lagoon Villa Membership — Privileges
+            Global Lagoon Villa Membership, Privileges
           </span>
         </Reveal>
 

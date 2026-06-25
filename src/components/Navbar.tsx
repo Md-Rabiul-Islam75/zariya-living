@@ -42,11 +42,11 @@ export function Navbar() {
       }`}
     >
       <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-        <Link href="/" aria-label="Zariya Living — home">
+        <Link href="/" aria-label="Zariya Living, home">
           <Wordmark size="md" />
         </Link>
 
-        {/* Desktop links — absolutely centered in the bar */}
+        {/* Desktop links, absolutely centered in the bar */}
         <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 lg:flex">
           {NAV_LINKS.map((link) => (
             <DesktopLink key={link.href} link={link} />
@@ -121,17 +121,29 @@ export function Navbar() {
                             transition={{ duration: 0.3, ease: EASE }}
                             className="overflow-hidden pl-4"
                           >
-                            {link.children.map((child) => (
-                              <li key={child.href}>
-                                <Link
-                                  href={child.href}
-                                  onClick={() => setOpen(false)}
-                                  className="block py-2 text-sm font-light text-foreground/70 hover:text-gold"
+                            {link.children.map((child) =>
+                              child.soon ? (
+                                <li
+                                  key={child.href}
+                                  className="flex items-center justify-between gap-2 py-2 text-sm font-light text-foreground/40"
                                 >
                                   {child.label}
-                                </Link>
-                              </li>
-                            ))}
+                                  <span className="rounded-full border border-gold/30 px-2 py-0.5 text-[9px] font-medium uppercase tracking-[0.15em] text-gold/70">
+                                    Soon
+                                  </span>
+                                </li>
+                              ) : (
+                                <li key={child.href}>
+                                  <Link
+                                    href={child.href}
+                                    onClick={() => setOpen(false)}
+                                    className="block py-2 text-sm font-light text-foreground/70 hover:text-gold"
+                                  >
+                                    {child.label}
+                                  </Link>
+                                </li>
+                              )
+                            )}
                           </motion.ul>
                         )}
                       </AnimatePresence>
@@ -227,16 +239,28 @@ function DesktopLink({ link }: { link: NavLink }) {
             className="absolute left-1/2 top-full z-50 w-56 -translate-x-1/2 pt-3"
           >
             <ul className="overflow-hidden rounded-xl border border-gold/15 bg-teal-deep/95 py-2 shadow-2xl backdrop-blur-md">
-              {link.children.map((child) => (
-                <li key={child.href}>
-                  <Link
-                    href={child.href}
-                    className="block px-5 py-2.5 text-sm font-light text-foreground/80 transition-colors hover:bg-gold/10 hover:text-gold"
+              {link.children.map((child) =>
+                child.soon ? (
+                  <li
+                    key={child.href}
+                    className="flex cursor-default items-center justify-between gap-2 px-5 py-2.5 text-sm font-light text-foreground/40"
                   >
                     {child.label}
-                  </Link>
-                </li>
-              ))}
+                    <span className="rounded-full border border-gold/30 px-2 py-0.5 text-[9px] font-medium uppercase tracking-[0.15em] text-gold/70">
+                      Soon
+                    </span>
+                  </li>
+                ) : (
+                  <li key={child.href}>
+                    <Link
+                      href={child.href}
+                      className="block px-5 py-2.5 text-sm font-light text-foreground/80 transition-colors hover:bg-gold/10 hover:text-gold"
+                    >
+                      {child.label}
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </motion.div>
         )}

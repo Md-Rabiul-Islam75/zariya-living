@@ -28,7 +28,7 @@ export function Testimonials() {
         </Reveal>
         <Reveal direction="up" delay={0.1} className="mx-auto mt-5 max-w-2xl text-center">
           <p className="text-base font-light leading-relaxed text-foreground/70 md:text-lg">
-            Not investors. Families — telling, in their own words, why they chose to belong.
+            Not investors. Families, telling, in their own words, why they chose to belong.
           </p>
         </Reveal>
 

@@ -29,8 +29,8 @@ export function CommunityStories() {
                   </p>
                 </blockquote>
                 <figcaption className="mt-6 text-xs font-semibold uppercase tracking-[0.2em] text-gold-deep">
-                  — {story.author}
-                </figcaption>
+                  {story.author}
+</figcaption>
               </motion.figure>
             </StaggerItem>
           ))}

@@ -5,7 +5,7 @@ import { EASE } from "@/lib/easing";
 import { useEffect, useRef, useState } from "react";
 
 /**
- * Custom animated select — replaces the native <select> so the dropdown looks
+ * Custom animated select, replaces the native <select> so the dropdown looks
  * and animates identically across every device and browser (native selects
  * render with OS-specific, un-animatable popups).
  */
