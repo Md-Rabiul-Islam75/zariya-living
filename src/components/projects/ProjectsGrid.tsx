@@ -21,23 +21,13 @@ export function ProjectsGrid() {
                   transition={{ duration: 0.4, ease: EASE }}
                   className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gold/15 bg-teal-panel/60 backdrop-blur-sm transition-colors duration-500 hover:border-gold/40"
                 >
-                  <div className="relative aspect-[3/2] overflow-hidden bg-teal-deep">
-                    {/* Blurred fill keeps odd-ratio images bar-free */}
-                    <Image
-                      src={project.image}
-                      alt=""
-                      aria-hidden
-                      fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="scale-110 object-cover opacity-50 blur-2xl"
-                    />
-                    {/* Complete image, never cropped */}
+                  <div className="relative aspect-[3/2] overflow-hidden">
                     <Image
                       src={project.image}
                       alt={project.name}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-contain transition-transform duration-700 group-hover:scale-105"
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                     <span
                       className={`absolute left-4 top-4 rounded-full px-3 py-1 text-[10px] font-medium uppercase tracking-[0.2em] backdrop-blur-sm ${

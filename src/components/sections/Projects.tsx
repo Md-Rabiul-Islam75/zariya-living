@@ -25,21 +25,13 @@ export function Projects() {
                 transition={{ duration: 0.4, ease: EASE }}
                 className="group overflow-hidden rounded-2xl bg-teal-panel"
               >
-                <div className="relative aspect-[3/2] overflow-hidden bg-teal-deep">
-                  <Image
-                    src={project.image}
-                    alt=""
-                    aria-hidden
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="scale-110 object-cover opacity-50 blur-2xl"
-                  />
+                <div className="relative aspect-[3/2] overflow-hidden">
                   <Image
                     src={project.image}
                     alt={project.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-contain transition-transform duration-700 group-hover:scale-105"
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <span className="absolute left-4 top-4 rounded-full bg-teal-deep/80 px-3 py-1 text-xs font-light uppercase tracking-[0.2em] text-gold backdrop-blur-sm">
                     {project.status}
