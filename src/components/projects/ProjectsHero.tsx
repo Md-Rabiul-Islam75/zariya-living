@@ -26,8 +26,8 @@ export function ProjectsHero() {
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-teal-deep/55" />
-        <div className="absolute inset-0 bg-gradient-to-t from-teal-deep via-transparent to-teal-deep/50" />
+        <div className="absolute inset-0 bg-teal-deep/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-teal-deep/90 via-transparent to-teal-deep/50" />
       </motion.div>
 
       <div className="relative z-10 px-6 text-center">
@@ -35,7 +35,7 @@ export function ProjectsHero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.2, ease: EASE }}
-          className="font-serif text-5xl font-light leading-tight text-foreground sm:text-6xl md:text-7xl"
+          className="font-serif text-5xl font-light leading-tight text-foreground [text-shadow:0_2px_30px_rgba(6,31,31,0.6)] sm:text-6xl md:text-7xl"
         >
           {PROJECTS_HERO.title}
         </motion.h1>
@@ -43,7 +43,7 @@ export function ProjectsHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.4, ease: EASE }}
-          className="mt-5 font-serif text-lg font-light italic text-foreground/80 md:text-2xl"
+          className="mt-5 font-serif text-lg font-light italic text-foreground/90 [text-shadow:0_2px_20px_rgba(6,31,31,0.6)] md:text-2xl"
         >
           {PROJECTS_HERO.subtitle}
         </motion.p>
