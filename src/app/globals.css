@@ -22,23 +22,23 @@
   --color-teal-panel: var(--teal-panel);
   --color-muted: var(--muted);
 
-  /* Single typeface across the whole site (serif). --font-sans maps to the
-     serif too so any `font-sans` utility stays consistent. */
-  --font-serif: var(--font-cormorant);
-  --font-sans: var(--font-cormorant);
+  /* Single typeface across the whole site (Rajdhani). Both the serif and sans
+     tokens map to it so every `font-serif`/`font-sans` utility is consistent. */
+  --font-serif: var(--font-rajdhani);
+  --font-sans: var(--font-rajdhani);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+  font-family: var(--font-rajdhani), -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-serif), Georgia, serif;
+  font-family: var(--font-rajdhani), sans-serif;
 }
 
 /* Smooth scrolling for in-page anchor navigation */
