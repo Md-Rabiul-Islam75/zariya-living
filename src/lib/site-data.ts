@@ -319,6 +319,60 @@ export const PROJECTS_NOTIFY = {
 } as const;
 
 /* ------------------------------------------------------------------ */
+/* Visit page                                                          */
+/* ------------------------------------------------------------------ */
+
+export const VISIT_HERO = {
+  title: "Stand on the Land.",
+  subtitle: "No brochure can do this place justice. Come see it with your own eyes.",
+  image: "/images/villa-hero.jpg",
+} as const;
+
+export const VISIT_TOUR = {
+  eyebrow: "The By-Air Experience Tour",
+  title: "A Complimentary Journey, on Us.",
+  image: "/images/sky-lounge.jpg",
+  body: "Confirmed bookings include a complimentary By-Air Sylhet Experience Tour. We fly you in, host you at the land, walk you through the masterplan, and show you the Sylhet that inspired Zariya — its shrines, its tea gardens, its quiet beauty.",
+  points: [
+    "Guided walk of the masterplan and the Lotus Tower site",
+    "A taste of Zariya Agro's farm-fresh hospitality",
+    "A private consultation — no pressure, just clarity",
+  ],
+} as const;
+
+export const VISIT_FORM = {
+  title: "Reserve Your Visit",
+  body: "Tell us a little about yourself and our team will arrange everything.",
+  cta: "Book a Site Visit",
+  fields: [
+    { name: "name", label: "Full Name", placeholder: "Your name", type: "text", required: true },
+    { name: "phone", label: "Phone / WhatsApp", placeholder: "+880 …", type: "tel", required: true },
+    { name: "email", label: "Email", placeholder: "you@email.com", type: "email", required: true },
+    { name: "country", label: "Country of Residence", placeholder: "e.g. United Kingdom", type: "text", required: false },
+    { name: "window", label: "Preferred Visit Window", placeholder: "e.g. December 2026", type: "text", required: false },
+    { name: "guests", label: "Number of Guests", placeholder: "e.g. 2 adults", type: "text", required: false },
+  ],
+} as const;
+
+export const VISIT_FAQ = {
+  title: "Questions, Answered",
+  items: [
+    {
+      q: "Is the land genuinely freehold and registered in my name?",
+      a: "Yes. Every Zariya holding — villa, resort, or agro share — is freehold and registered in your name on completion. You receive a legal title deed, and your ownership is heritable and resaleable.",
+    },
+    {
+      q: "How does the income from a Resort Share actually work?",
+      a: "Resort Shares earn from year-round resort operations — seasonal stays, corporate bookings, and retreats. Shareholders receive 50% of the net resort profit, distributed on a defined schedule.",
+    },
+    {
+      q: "What does the money-back guarantee cover?",
+      a: "If Zariya cannot deliver on its committed obligations to you, your investment is returned in full. We would rather protect your trust than keep your money. The specific terms are confirmed in your ownership agreement.",
+    },
+  ],
+} as const;
+
+/* ------------------------------------------------------------------ */
 /* Community page                                                      */
 /* ------------------------------------------------------------------ */
 
