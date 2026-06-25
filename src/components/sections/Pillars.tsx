@@ -34,11 +34,11 @@ export function Pillars() {
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-teal-deep via-teal-deep/30 to-transparent" />
-                  <div className="absolute inset-x-0 bottom-0 p-7">
+                  <div className="absolute inset-0 bg-[linear-gradient(to_top,var(--color-teal-deep)_8%,transparent_60%)]" />
+                  <div className="absolute inset-x-0 bottom-0 p-7 [text-shadow:0_1px_12px_rgba(6,31,31,0.7)]">
                     <span className="text-xs font-light uppercase tracking-[0.3em] text-gold">{pillar.eyebrow}</span>
                     <h3 className="mt-2 font-serif text-2xl font-light text-foreground">{pillar.title}</h3>
-                    <p className="mt-3 max-w-xs text-sm font-light leading-relaxed text-foreground/75">
+                    <p className="mt-3 max-w-xs text-sm font-light leading-relaxed text-foreground/85">
                       {pillar.description}
                     </p>
                     <span className="mt-4 inline-flex items-center gap-2 text-sm font-light text-gold opacity-0 transition-all duration-500 group-hover:opacity-100">
