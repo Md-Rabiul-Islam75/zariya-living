@@ -32,7 +32,7 @@ export default function RootLayout({
       lang="en"
       className={`${cormorant.variable} ${jost.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col overflow-x-clip">
         {children}
         <ScrollToTop />
       </body>

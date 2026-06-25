@@ -64,7 +64,7 @@ export function Hero() {
             </span>
           </motion.div>
 
-          <h1 className="font-serif text-5xl font-light leading-[1.05] text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
+          <h1 className="font-serif text-4xl font-light leading-[1.05] text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
             {titleLines.map((line, i) => (
               <motion.span
                 key={line}
@@ -83,7 +83,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.95, ease: EASE }}
-            className="mt-7 font-serif text-2xl font-light italic leading-snug text-gold md:text-3xl"
+            className="mt-5 font-serif text-xl font-light italic leading-snug text-gold sm:mt-7 sm:text-2xl md:text-3xl"
           >
             {SITE.hero.tagline}
           </motion.p>
@@ -101,7 +101,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.3, ease: EASE }}
-            className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center"
+            className="mt-8 flex flex-col items-start gap-3 sm:mt-10 sm:flex-row sm:items-center sm:gap-4"
           >
             <Link
               href="#book"
@@ -124,7 +124,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.8, duration: 1 }}
-        className="absolute bottom-10 left-1/2 z-10 -translate-x-1/2"
+        className="absolute bottom-10 left-1/2 z-10 hidden -translate-x-1/2 md:block"
       >
         <div className="flex flex-col items-center gap-3">
           <span className="text-xs uppercase tracking-[0.4em] text-foreground/70">Scroll</span>
