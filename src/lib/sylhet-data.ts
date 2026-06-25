@@ -63,7 +63,7 @@ export const SYLHET = {
       },
       {
         name: "Golden Sovereign",
-        image: "/images/villa-sunset.png",
+        image: "/images/golden-sovereign.png",
         intro: "Dark stone, brushed gold, and a sense of occasion. The Golden Sovereign is for those who want their space to feel as significant as the moment they are marking.",
         features: [
           { label: "Cosy Bed", value: "A grand king-size bed framed in rich timber, with a deep upholstered headboard and layered linens in royal tones." },
@@ -73,7 +73,7 @@ export const SYLHET = {
       },
       {
         name: "Timber & Ember",
-        image: "/images/villa-cottages.png",
+        image: "/images/timber-ember.png",
         intro: "Warm wood, natural light, and the quiet comfort of nature brought indoors. Timber & Ember is for the traveller who finds luxury in simplicity.",
         features: [
           { label: "Cosy Bed", value: "A handcrafted timber bed with breathable cotton linens and a woven throw in earthen tones." },
@@ -138,7 +138,7 @@ export const SYLHET = {
   lagoon: {
     eyebrow: "Part Three · Lagoon Villa Community",
     title: "Lagoon Living for the Privileged Few.",
-    image: "/images/villa-hero.jpg",
+    image: "/images/villa-sunset.png",
     body: "A limited lagoon-front collection — 2,200 sq ft duplexes with four bedrooms, a private infinity pool, and a lagoon-facing balcony. Owned through a defined freehold share, earning resort rental income, and gathered into a value-based global membership community.",
     tags: ["2,200 sq ft duplex · 4 beds", "Private infinity pool", "Resort rental income", "Global membership gateway"],
     cta: "Explore the Lagoon Community",
