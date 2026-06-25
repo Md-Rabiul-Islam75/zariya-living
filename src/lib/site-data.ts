@@ -325,7 +325,7 @@ export const PROJECTS_NOTIFY = {
 export const VISIT_HERO = {
   title: "Stand on the Land.",
   subtitle: "No brochure can do this place justice. Come see it with your own eyes.",
-  image: "/images/villa-hero.jpg",
+  image: "/images/villa-community.png",
 } as const;
 
 export const VISIT_TOUR = {
