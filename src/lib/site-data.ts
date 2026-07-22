@@ -15,6 +15,31 @@ export const SITE = {
   },
 } as const;
 
+// Hero carousel slides — the three Zariya Sylhet pillars.
+export const HERO_SLIDES = [
+  {
+    category: "Hospitality",
+    title: "Zariya Resort",
+    description:
+      "A five-star resort crowned by the Lotus Tower, with observation decks, sky lounges, fine dining, and wellness.",
+    image: "/images/resort-pool.png",
+  },
+  {
+    category: "Organic Farm",
+    title: "Zariya Agro",
+    description:
+      "A living organic farm, chemical-free produce, orchards, dairy, and fisheries that feed the community.",
+    image: "/images/agro-overview.png",
+  },
+  {
+    category: "Residences",
+    title: "Lagoon Villa Community",
+    description:
+      "Architect-designed lagoon-front villas, a limited community of owners who chose to live close to nature.",
+    image: "/images/villa-community.png",
+  },
+] as const;
+
 // Contact details. Replace placeholders with the real values.
 export const CONTACT = {
   whatsapp: "8801907070640", // international format, no '+', used in wa.me links

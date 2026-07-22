@@ -105,7 +105,7 @@ export function Navbar() {
                     <>
                       <button
                         onClick={() => setMobileSub((s) => (s === link.href ? null : link.href))}
-                        className="flex w-full items-center justify-between py-2.5 text-base font-light tracking-wide text-foreground/85"
+                        className="flex w-full items-center justify-between py-2.5 text-base font-medium tracking-wide text-foreground"
                       >
                         {link.label}
                         <span className={`text-gold transition-transform duration-300 ${mobileSub === link.href ? "rotate-180" : ""}`}>
@@ -125,7 +125,7 @@ export function Navbar() {
                               child.soon ? (
                                 <li
                                   key={child.href}
-                                  className="flex items-center justify-between gap-2 py-2 text-sm font-light text-foreground/40"
+                                  className="flex items-center justify-between gap-2 py-2 text-sm font-normal text-foreground/60"
                                 >
                                   {child.label}
                                   <span className="rounded-full border border-gold/30 px-2 py-0.5 text-[9px] font-medium uppercase tracking-[0.15em] text-gold/70">
@@ -137,7 +137,7 @@ export function Navbar() {
                                   <Link
                                     href={child.href}
                                     onClick={() => setOpen(false)}
-                                    className="block py-2 text-sm font-light text-foreground/70 hover:text-gold"
+                                    className="block py-2 text-sm font-medium text-foreground hover:text-gold"
                                   >
                                     {child.label}
                                   </Link>
@@ -152,7 +152,7 @@ export function Navbar() {
                     <Link
                       href={link.href}
                       onClick={() => setOpen(false)}
-                      className="block py-2.5 text-base font-light tracking-wide text-foreground/85 hover:text-gold"
+                      className="block py-2.5 text-base font-medium tracking-wide text-foreground hover:text-gold"
                     >
                       {link.label}
                     </Link>
@@ -201,7 +201,7 @@ function DesktopLink({ link }: { link: NavLink }) {
       <li>
         <Link
           href={link.href}
-          className="group relative text-sm font-light tracking-wide text-foreground/85 transition-colors hover:text-gold"
+          className="group relative text-sm font-medium tracking-wide text-foreground [text-shadow:0_1px_8px_rgba(6,31,31,0.55)] transition-colors hover:text-gold"
         >
           {link.label}
           <span className="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full" />
@@ -218,7 +218,7 @@ function DesktopLink({ link }: { link: NavLink }) {
     >
       <Link
         href={link.href}
-        className="group flex items-center gap-1 text-sm font-light tracking-wide text-foreground/85 transition-colors hover:text-gold"
+        className="group flex items-center gap-1 text-sm font-medium tracking-wide text-foreground [text-shadow:0_1px_8px_rgba(6,31,31,0.55)] transition-colors hover:text-gold"
       >
         {link.label}
         <span className={`text-[0.65em] text-gold transition-transform duration-300 ${hover ? "rotate-180" : ""}`}>
@@ -243,7 +243,7 @@ function DesktopLink({ link }: { link: NavLink }) {
                 child.soon ? (
                   <li
                     key={child.href}
-                    className="flex cursor-default items-center justify-between gap-2 px-5 py-2.5 text-sm font-light text-foreground/40"
+                    className="flex cursor-default items-center justify-between gap-2 px-5 py-2.5 text-sm font-normal text-foreground/60"
                   >
                     {child.label}
                     <span className="rounded-full border border-gold/30 px-2 py-0.5 text-[9px] font-medium uppercase tracking-[0.15em] text-gold/70">
@@ -254,7 +254,7 @@ function DesktopLink({ link }: { link: NavLink }) {
                   <li key={child.href}>
                     <Link
                       href={child.href}
-                      className="block px-5 py-2.5 text-sm font-light text-foreground/80 transition-colors hover:bg-gold/10 hover:text-gold"
+                      className="block px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-gold/10 hover:text-gold"
                     >
                       {child.label}
                     </Link>
