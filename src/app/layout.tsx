@@ -25,7 +25,9 @@ export default function RootLayout({
       lang="en"
       className={`${rajdhani.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col overflow-x-clip">
+      {/* Browser extensions (e.g. Grammarly) inject attributes on <body> before
+          hydration; suppress the resulting attribute-mismatch warning. */}
+      <body className="min-h-full flex flex-col overflow-x-clip" suppressHydrationWarning>
         {children}
         <ScrollToTop />
       </body>
