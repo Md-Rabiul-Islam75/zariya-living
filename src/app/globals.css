@@ -9,6 +9,8 @@
   --gold-deep: #9c7647; /* deeper gold for accents on light/white backgrounds */
   --teal-deep: #0a3531; /* darkest teal */
   --teal-panel: #15524c; /* lighter teal panel */
+  --teal-bright: #22a08f; /* mid teal for navbar/footer: light enough for the dark logo, not neon */
+  --ink: #04211d; /* near-black teal for text on the light/mid-teal bars */
   --muted: #9bb0ad;
 }
 
@@ -20,6 +22,8 @@
   --color-gold-deep: var(--gold-deep);
   --color-teal-deep: var(--teal-deep);
   --color-teal-panel: var(--teal-panel);
+  --color-teal-bright: var(--teal-bright);
+  --color-ink: var(--ink);
   --color-muted: var(--muted);
 
   /* Single typeface across the whole site (Rajdhani). Both the serif and sans

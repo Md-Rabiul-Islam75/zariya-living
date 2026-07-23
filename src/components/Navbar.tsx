@@ -1,11 +1,11 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { EASE } from "@/lib/easing";
 import { useState } from "react";
 import { NAV_LINKS, CONTACT, type NavLink } from "@/lib/site-data";
-import { Wordmark } from "@/components/ui/Wordmark";
 import { BookVisitModal } from "@/components/BookVisitModal";
 
 const WHATSAPP_HREF = `https://wa.me/${CONTACT.whatsapp}`;
@@ -37,19 +37,29 @@ export function Navbar() {
       transition={{ duration: 0.8, ease: EASE }}
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
         scrolled
-          ? "bg-teal-deep/90 backdrop-blur-md shadow-[0_1px_0_rgba(223,193,165,0.15)]"
+          ? "bg-teal-bright shadow-[0_4px_20px_rgba(6,31,31,0.25)]"
           : "bg-transparent"
       }`}
     >
       <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-        <Link href="/" aria-label="Zariya Living, home">
-          <Wordmark size="md" />
+        <Link href="/" aria-label="Zariya Sylhet Resort & Villas, home">
+          <Image
+            src="/images/logo/zariya-sylhet-logo.png"
+            alt="Zariya Sylhet Resort & Villas"
+            width={1939}
+            height={513}
+            priority
+            // Dark logo art: render it white while over the banner, natural on the solid bar.
+            className={`h-11 w-auto object-contain transition-[filter] duration-500 ${
+              scrolled ? "" : "brightness-0 invert"
+            }`}
+          />
         </Link>
 
         {/* Desktop links, absolutely centered in the bar */}
         <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-8 lg:flex">
           {NAV_LINKS.map((link) => (
-            <DesktopLink key={link.href} link={link} />
+            <DesktopLink key={link.href} link={link} scrolled={scrolled} />
           ))}
         </ul>
 
@@ -62,14 +72,16 @@ export function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chat on WhatsApp"
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-gold/50 text-gold transition-all duration-300 hover:bg-gold hover:text-teal-deep"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white shadow-md transition-transform duration-300 hover:scale-110"
             >
               <WhatsAppIcon className="h-5 w-5" />
             </a>
             <button
               type="button"
               onClick={() => setBookOpen(true)}
-              className="rounded-md bg-gold px-6 py-2.5 text-xs font-medium uppercase tracking-[0.15em] text-teal-deep transition-transform duration-300 hover:scale-105"
+              className={`rounded-md px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.15em] transition-all duration-300 hover:scale-105 ${
+                scrolled ? "bg-teal-deep text-foreground" : "bg-gold text-teal-deep"
+              }`}
             >
               Book a Visit
             </button>
@@ -81,9 +93,9 @@ export function Navbar() {
             onClick={() => setOpen((v) => !v)}
             className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
           >
-            <span className={`h-px w-6 bg-gold transition-transform duration-300 ${open ? "translate-y-[7px] rotate-45" : ""}`} />
-            <span className={`h-px w-6 bg-gold transition-opacity duration-300 ${open ? "opacity-0" : ""}`} />
-            <span className={`h-px w-6 bg-gold transition-transform duration-300 ${open ? "-translate-y-[7px] -rotate-45" : ""}`} />
+            <span className={`h-px w-6 transition-transform duration-300 ${scrolled ? "bg-white" : "bg-gold"} ${open ? "translate-y-[7px] rotate-45" : ""}`} />
+            <span className={`h-px w-6 transition-opacity duration-300 ${scrolled ? "bg-white" : "bg-gold"} ${open ? "opacity-0" : ""}`} />
+            <span className={`h-px w-6 transition-transform duration-300 ${scrolled ? "bg-white" : "bg-gold"} ${open ? "-translate-y-[7px] -rotate-45" : ""}`} />
           </button>
         </div>
       </nav>
@@ -177,7 +189,7 @@ export function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Chat on WhatsApp"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-gold/50 text-gold"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white shadow-md"
                 >
                   <WhatsAppIcon className="h-5 w-5" />
                 </a>
@@ -193,18 +205,25 @@ export function Navbar() {
   );
 }
 
-function DesktopLink({ link }: { link: NavLink }) {
+function DesktopLink({ link, scrolled }: { link: NavLink; scrolled: boolean }) {
   const [hover, setHover] = useState(false);
+
+  // White links in both states; a text-shadow keeps them legible over the banner.
+  const linkText = scrolled
+    ? "text-white hover:text-ink"
+    : "text-white [text-shadow:0_1px_10px_rgba(6,31,31,0.75)] hover:text-gold";
+  const accent = scrolled ? "bg-white" : "bg-gold";
+  const caret = scrolled ? "text-white" : "text-gold";
 
   if (!link.children) {
     return (
       <li>
         <Link
           href={link.href}
-          className="group relative text-sm font-medium tracking-wide text-foreground [text-shadow:0_1px_8px_rgba(6,31,31,0.55)] transition-colors hover:text-gold"
+          className={`group relative text-sm font-semibold tracking-wide transition-colors ${linkText}`}
         >
           {link.label}
-          <span className="absolute -bottom-1 left-0 h-px w-0 bg-gold transition-all duration-300 group-hover:w-full" />
+          <span className={`absolute -bottom-1 left-0 h-px w-0 transition-all duration-300 group-hover:w-full ${accent}`} />
         </Link>
       </li>
     );
@@ -218,10 +237,10 @@ function DesktopLink({ link }: { link: NavLink }) {
     >
       <Link
         href={link.href}
-        className="group flex items-center gap-1 text-sm font-medium tracking-wide text-foreground [text-shadow:0_1px_8px_rgba(6,31,31,0.55)] transition-colors hover:text-gold"
+        className={`group flex items-center gap-1 text-sm font-semibold tracking-wide transition-colors ${linkText}`}
       >
         {link.label}
-        <span className={`text-[0.65em] text-gold transition-transform duration-300 ${hover ? "rotate-180" : ""}`}>
+        <span className={`text-[0.65em] transition-transform duration-300 ${caret} ${hover ? "rotate-180" : ""}`}>
           ▾
         </span>
       </Link>
