@@ -19,7 +19,7 @@ export function OwnershipOptions() {
           </p>
         </Reveal>
 
-        <Stagger className="mt-16 grid items-start gap-7 md:grid-cols-3">
+        <Stagger className="mt-16 grid items-start gap-7 sm:grid-cols-2 lg:grid-cols-3">
           {OWNERSHIP_OPTIONS.map((opt) => (
             <StaggerItem key={opt.title} className="h-full">
               <motion.article

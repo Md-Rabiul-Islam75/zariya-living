@@ -17,7 +17,7 @@ export function Projects() {
           intro="The flagship rises in Sylhet. Next, the same way of living comes to three more of Bangladesh's most beautiful places."
         />
 
-        <Stagger className="mt-16 grid gap-7 md:grid-cols-3">
+        <Stagger className="mt-16 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
           {PROJECTS.map((project) => (
             <StaggerItem key={project.name}>
               <motion.article

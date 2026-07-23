@@ -27,7 +27,7 @@ export function ThreeExperiences() {
           <p className="text-base font-normal leading-relaxed text-teal-deep/75 md:text-lg">{experiences.intro}</p>
         </Reveal>
 
-        <Stagger className="mt-16 grid gap-7 md:grid-cols-3">
+        <Stagger className="mt-16 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
           {experiences.cards.map((card) => (
             <StaggerItem key={card.num} className="h-full">
               <motion.article

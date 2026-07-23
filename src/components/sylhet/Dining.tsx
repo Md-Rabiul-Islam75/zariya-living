@@ -24,7 +24,7 @@ export function Dining() {
           </h2>
         </Reveal>
 
-        <Stagger className="mt-14 grid gap-7 md:grid-cols-3">
+        <Stagger className="mt-14 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
           {dining.cards.map((card) => (
             <StaggerItem key={card.title} className="h-full">
               <motion.article

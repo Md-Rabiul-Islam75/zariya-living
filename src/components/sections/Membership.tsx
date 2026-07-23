@@ -17,7 +17,7 @@ export function Membership() {
           intro="From a working share of the land to a residence in the community, choose the entry that fits the life you are building."
         />
 
-        <Stagger className="mt-16 grid gap-7 md:grid-cols-3">
+        <Stagger className="mt-16 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
           {MEMBERSHIP.map((tier) => (
             <StaggerItem key={tier.title}>
               <motion.div

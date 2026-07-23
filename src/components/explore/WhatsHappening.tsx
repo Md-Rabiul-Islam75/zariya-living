@@ -16,7 +16,7 @@ export function WhatsHappening() {
           </h2>
         </Reveal>
 
-        <Stagger className="mt-14 grid gap-7 md:grid-cols-3">
+        <Stagger className="mt-14 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
           {EXPLORE_NEWS.map((item) => (
             <StaggerItem key={item.title} className="h-full">
               <motion.article

@@ -29,6 +29,10 @@ export function Navbar() {
     setScrolled(latest > 40);
   });
 
+  // Solid bar once scrolled, and also whenever the mobile menu is open so the
+  // dropdown never hangs off a transparent header.
+  const solid = scrolled || open;
+
   return (
     <>
     <motion.header
@@ -36,7 +40,7 @@ export function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: EASE }}
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-500 ${
-        scrolled
+        solid
           ? "bg-teal-bright shadow-[0_4px_20px_rgba(6,31,31,0.25)]"
           : "bg-transparent"
       }`}
@@ -50,8 +54,8 @@ export function Navbar() {
             height={513}
             priority
             // Dark logo art: render it white while over the banner, natural on the solid bar.
-            className={`h-10 w-auto object-contain transition-[filter] duration-500 ${
-              scrolled ? "" : "brightness-0 invert"
+            className={`h-8 w-auto object-contain transition-[filter] duration-500 sm:h-10 ${
+              solid ? "" : "brightness-0 invert"
             }`}
           />
         </Link>
@@ -93,9 +97,9 @@ export function Navbar() {
             onClick={() => setOpen((v) => !v)}
             className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 lg:hidden"
           >
-            <span className={`h-px w-6 transition-transform duration-300 ${scrolled ? "bg-white" : "bg-gold"} ${open ? "translate-y-[7px] rotate-45" : ""}`} />
-            <span className={`h-px w-6 transition-opacity duration-300 ${scrolled ? "bg-white" : "bg-gold"} ${open ? "opacity-0" : ""}`} />
-            <span className={`h-px w-6 transition-transform duration-300 ${scrolled ? "bg-white" : "bg-gold"} ${open ? "-translate-y-[7px] -rotate-45" : ""}`} />
+            <span className={`h-px w-6 transition-transform duration-300 ${solid ? "bg-white" : "bg-gold"} ${open ? "translate-y-[7px] rotate-45" : ""}`} />
+            <span className={`h-px w-6 transition-opacity duration-300 ${solid ? "bg-white" : "bg-gold"} ${open ? "opacity-0" : ""}`} />
+            <span className={`h-px w-6 transition-transform duration-300 ${solid ? "bg-white" : "bg-gold"} ${open ? "-translate-y-[7px] -rotate-45" : ""}`} />
           </button>
         </div>
       </nav>

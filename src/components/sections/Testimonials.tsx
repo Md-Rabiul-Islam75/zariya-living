@@ -32,7 +32,7 @@ export function Testimonials() {
           </p>
         </Reveal>
 
-        <Stagger className="mt-16 grid gap-7 md:grid-cols-3">
+        <Stagger className="mt-16 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS.map((t) => (
             <StaggerItem key={t.name} className="h-full">
               <motion.figure

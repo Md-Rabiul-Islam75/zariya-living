@@ -29,7 +29,7 @@ export function SylhetProject() {
           ))}
         </div>
 
-        <Stagger className="mt-14 grid gap-6 md:grid-cols-3">
+        <Stagger className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {project.cards.map((card) => (
             <StaggerItem key={card.label} className="h-full">
               <motion.div

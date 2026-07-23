@@ -34,7 +34,7 @@ export function WhatWeBelieve() {
           </h2>
         </Reveal>
 
-        <Stagger className="mt-16 grid gap-12 md:grid-cols-3 md:gap-10">
+        <Stagger className="mt-16 grid gap-12 sm:grid-cols-2 lg:grid-cols-3 md:gap-10">
           {EXPLORE_BELIEFS.map((belief) => (
             <StaggerItem key={belief.title}>
               <div className="border-t border-teal-deep/15 pt-8">

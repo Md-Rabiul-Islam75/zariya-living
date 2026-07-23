@@ -18,7 +18,7 @@ export function Pillars() {
           intro="Resort, farm, and home, each complete on its own, each richer because of the others."
         />
 
-        <Stagger className="mt-16 grid gap-7 md:grid-cols-3">
+        <Stagger className="mt-16 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
           {PILLARS.map((pillar) => (
             <StaggerItem key={pillar.id}>
               <Link href={`#${pillar.id}`}>
