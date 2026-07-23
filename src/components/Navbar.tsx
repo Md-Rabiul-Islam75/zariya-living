@@ -41,7 +41,7 @@ export function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+      <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5 lg:px-10">
         <Link href="/" aria-label="Zariya Sylhet Resort & Villas, home">
           <Image
             src="/images/logo/zariya-sylhet-logo.png"
@@ -50,7 +50,7 @@ export function Navbar() {
             height={513}
             priority
             // Dark logo art: render it white while over the banner, natural on the solid bar.
-            className={`h-11 w-auto object-contain transition-[filter] duration-500 ${
+            className={`h-10 w-auto object-contain transition-[filter] duration-500 ${
               scrolled ? "" : "brightness-0 invert"
             }`}
           />
@@ -72,14 +72,14 @@ export function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chat on WhatsApp"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white shadow-md transition-transform duration-300 hover:scale-110"
+              className="flex h-9 w-9 items-center justify-center rounded-full bg-[#25D366] text-white shadow-md transition-transform duration-300 hover:scale-110"
             >
               <WhatsAppIcon className="h-5 w-5" />
             </a>
             <button
               type="button"
               onClick={() => setBookOpen(true)}
-              className={`rounded-md px-6 py-2.5 text-xs font-semibold uppercase tracking-[0.15em] transition-all duration-300 hover:scale-105 ${
+              className={`rounded-md px-5 py-2 text-xs font-semibold uppercase tracking-[0.15em] transition-all duration-300 hover:scale-105 ${
                 scrolled ? "bg-teal-deep text-foreground" : "bg-gold text-teal-deep"
               }`}
             >
@@ -91,7 +91,7 @@ export function Navbar() {
           <button
             aria-label="Toggle menu"
             onClick={() => setOpen((v) => !v)}
-            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
+            className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 lg:hidden"
           >
             <span className={`h-px w-6 transition-transform duration-300 ${scrolled ? "bg-white" : "bg-gold"} ${open ? "translate-y-[7px] rotate-45" : ""}`} />
             <span className={`h-px w-6 transition-opacity duration-300 ${scrolled ? "bg-white" : "bg-gold"} ${open ? "opacity-0" : ""}`} />
@@ -220,7 +220,7 @@ function DesktopLink({ link, scrolled }: { link: NavLink; scrolled: boolean }) {
       <li>
         <Link
           href={link.href}
-          className={`group relative text-sm font-semibold tracking-wide transition-colors ${linkText}`}
+          className={`group relative inline-flex items-center text-sm font-semibold tracking-wide transition-colors ${linkText}`}
         >
           {link.label}
           <span className={`absolute -bottom-1 left-0 h-px w-0 transition-all duration-300 group-hover:w-full ${accent}`} />
@@ -237,7 +237,7 @@ function DesktopLink({ link, scrolled }: { link: NavLink; scrolled: boolean }) {
     >
       <Link
         href={link.href}
-        className={`group flex items-center gap-1 text-sm font-semibold tracking-wide transition-colors ${linkText}`}
+        className={`group inline-flex items-center gap-1 text-sm font-semibold tracking-wide transition-colors ${linkText}`}
       >
         {link.label}
         <span className={`text-[0.65em] transition-transform duration-300 ${caret} ${hover ? "rotate-180" : ""}`}>

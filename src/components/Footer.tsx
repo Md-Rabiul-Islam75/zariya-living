@@ -16,6 +16,14 @@ import {
 
 const WHATSAPP_HREF = `https://wa.me/${CONTACT.whatsapp}`;
 
+// Official brand colours for the social buttons.
+const SOCIAL_BRAND: Record<string, string> = {
+  facebook: "bg-[#1877F2]",
+  youtube: "bg-[#FF0000]",
+  instagram: "bg-[linear-gradient(45deg,#F58529,#DD2A7B_50%,#8134AF)]",
+  linkedin: "bg-[#0A66C2]",
+};
+
 const colVariants = {
   hidden: { opacity: 0, y: 30 },
   show: (i: number) => ({
@@ -31,7 +39,7 @@ export function Footer() {
       {/* Top hairline gradient */}
       <div className="h-px w-full bg-gradient-to-r from-transparent via-teal-deep/30 to-transparent" />
       {/* Ambient glow */}
-      <div className="pointer-events-none absolute -bottom-40 left-1/2 h-80 w-[40rem] -translate-x-1/2 rounded-full bg-ink/5 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-40 left-1/2 h-80 w-[40rem] -translate-x-1/2 rounded-full bg-white/5 blur-3xl" />
 
       <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-8">
@@ -53,7 +61,7 @@ export function Footer() {
                 className="h-16 w-auto object-contain"
               />
             </Link>
-            <p className="mt-6 max-w-xs font-serif text-lg font-normal italic leading-relaxed text-ink">
+            <p className="mt-6 max-w-xs font-serif text-lg font-normal italic leading-relaxed text-white">
               Zariya. Belonging today, legacy tomorrow.
             </p>
 
@@ -65,7 +73,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-ink/40 text-ink transition-all duration-300 hover:-translate-y-1 hover:border-teal-deep hover:bg-ink hover:text-teal-bright"
+                  className={`flex h-10 w-10 items-center justify-center rounded-full text-white shadow-md transition-transform duration-300 hover:-translate-y-1 hover:scale-105 ${SOCIAL_BRAND[s.icon]}`}
                 >
                   <SocialIcon name={s.icon} className="h-[18px] w-[18px]" />
                 </a>
@@ -107,9 +115,9 @@ export function Footer() {
               <FooterLink href="/projects/sylhet">Sylhet Resort &amp; Villas</FooterLink>
               {PROJECTS.map((p) => (
                 <li key={p.name}>
-                  <span className="group flex items-center gap-2 text-sm font-medium text-ink">
+                  <span className="group flex items-center gap-2 text-sm font-medium text-white">
                     {p.name}
-                    <span className="rounded-full border border-ink/40 px-2 py-0.5 text-[10px] uppercase tracking-[0.15em] text-ink">
+                    <span className="rounded-full border border-white/40 px-2 py-0.5 text-[10px] uppercase tracking-[0.15em] text-white">
                       Soon
                     </span>
                   </span>
@@ -128,7 +136,7 @@ export function Footer() {
             className="lg:col-span-3"
           >
             <FooterHeading>Get in Touch</FooterHeading>
-            <ul className="mt-5 space-y-3 text-sm font-medium text-ink">
+            <ul className="mt-5 space-y-3 text-sm font-medium text-white">
               <li>
                 <a href={`tel:${CONTACT.phone.replace(/[^+\d]/g, "")}`} className="transition-colors hover:text-teal-panel">
                   {CONTACT.phone}
@@ -144,7 +152,7 @@ export function Footer() {
                   WhatsApp
                 </a>
               </li>
-              <li className="pt-1 leading-relaxed text-ink">{CONTACT.address}</li>
+              <li className="pt-1 leading-relaxed text-white">{CONTACT.address}</li>
             </ul>
 
             <FooterContactForm />
@@ -152,28 +160,28 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 border-t border-ink/15 pt-8">
+        <div className="mt-16 border-t border-white/25 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
               {LEGAL_LINKS.map((l) => (
                 <Link
                   key={l.href}
                   href={l.href}
-                  className="text-xs font-normal text-ink transition-colors hover:text-teal-panel"
+                  className="text-xs font-normal text-white transition-colors hover:text-teal-panel"
                 >
                   {l.label}
                 </Link>
               ))}
             </div>
             <div className="flex items-center gap-6">
-              <p className="text-xs font-normal text-ink">
+              <p className="text-xs font-normal text-white">
                 © {new Date().getFullYear()} Zariya Living Ltd.
               </p>
               <BackToTop />
             </div>
           </div>
 
-          <p className="mt-6 max-w-3xl text-xs font-normal leading-relaxed text-ink">
+          <p className="mt-6 max-w-3xl text-xs font-normal leading-relaxed text-white">
             All visuals, renderings, and images are conceptual representations only and are subject to change.
             Final design, materials, landscaping, and finishes may vary from those depicted.
           </p>
@@ -185,7 +193,7 @@ export function Footer() {
 
 function FooterHeading({ children }: { children: React.ReactNode }) {
   return (
-    <h3 className="text-xs font-semibold uppercase tracking-[0.3em] text-ink">{children}</h3>
+    <h3 className="text-xs font-semibold uppercase tracking-[0.3em] text-white">{children}</h3>
   );
 }
 
@@ -194,9 +202,9 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
     <li>
       <Link
         href={href}
-        className="group inline-flex items-center text-sm font-medium text-ink transition-colors hover:text-teal-panel"
+        className="group inline-flex items-center text-sm font-medium text-white transition-colors hover:text-teal-panel"
       >
-        <span className="mr-0 h-px w-0 bg-ink transition-all duration-300 group-hover:mr-2 group-hover:w-4" />
+        <span className="mr-0 h-px w-0 bg-white transition-all duration-300 group-hover:mr-2 group-hover:w-4" />
         {children}
       </Link>
     </li>
@@ -220,9 +228,9 @@ function FooterContactForm() {
             key="sent"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            className="flex items-center gap-2 text-sm font-medium text-ink"
+            className="flex items-center gap-2 text-sm font-medium text-white"
           >
-            <span className="flex h-6 w-6 items-center justify-center rounded-full border border-ink text-xs">✓</span>
+            <span className="flex h-6 w-6 items-center justify-center rounded-full border border-white text-xs">✓</span>
             Message sent, we&apos;ll be in touch.
           </motion.p>
         ) : (
@@ -239,13 +247,13 @@ function FooterContactForm() {
               name="email"
               required
               placeholder="Email"
-              className="w-full border-b border-ink/30 bg-transparent py-2 text-sm text-ink placeholder:text-ink/55 transition-colors focus:border-ink focus:outline-none"
+              className="w-full border-b border-white/40 bg-transparent py-2 text-sm text-white placeholder:text-white/60 transition-colors focus:border-white focus:outline-none"
             />
             <input
               type="text"
               name="message"
               placeholder="Message"
-              className="w-full border-b border-ink/30 bg-transparent py-2 text-sm text-ink placeholder:text-ink/55 transition-colors focus:border-ink focus:outline-none"
+              className="w-full border-b border-white/40 bg-transparent py-2 text-sm text-white placeholder:text-white/60 transition-colors focus:border-white focus:outline-none"
             />
             <motion.button
               whileHover={{ scale: 1.03 }}
@@ -268,7 +276,7 @@ function BackToTop() {
       type="button"
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       aria-label="Back to top"
-      className="group flex items-center gap-1.5 text-xs font-normal text-ink transition-colors hover:text-teal-panel"
+      className="group flex items-center gap-1.5 text-xs font-normal text-white transition-colors hover:text-teal-panel"
     >
       Top
       <span className="transition-transform duration-300 group-hover:-translate-y-1">↑</span>
