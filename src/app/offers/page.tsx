@@ -6,6 +6,11 @@ import { AgroIncludes, ResortIncludes, Returns, SecurityTimeline } from "@/compo
 import { SpecialBonus, PaymentPlan } from "@/components/offers/OffersBonusPayment";
 import { OffersApply, OffersClosing } from "@/components/offers/OffersApply";
 import { OffersFooter } from "@/components/offers/OffersFooter";
+import { OffersGate } from "@/components/offers/OffersGate";
+
+// Secret carried by the ticket QR: /offers?key=founding10
+// Override in the environment (OFFERS_KEY) without touching code.
+const ACCESS_KEY = process.env.OFFERS_KEY ?? "founding10";
 
 export const metadata: Metadata = {
   title: "The Founding 10 Program — Zariya Living",
@@ -15,7 +20,18 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-export default function OffersPage() {
+export default async function OffersPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ key?: string }>;
+}) {
+  const { key } = await searchParams;
+
+  // No / wrong key (i.e. not opened via the ticket QR) -> private notice.
+  if (key !== ACCESS_KEY) {
+    return <OffersGate />;
+  }
+
   return (
     <main className="bg-teal-deep">
       <OffersHeader />
