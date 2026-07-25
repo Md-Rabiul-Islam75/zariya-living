@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local reference / working files (not part of the app)
+/download/
+Hoisie Tickets Back Final Outline.pdf
+*.pdf
