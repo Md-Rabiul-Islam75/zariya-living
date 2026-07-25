@@ -73,7 +73,7 @@ export function Philosophy() {
               width={1640}
               height={720}
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="h-auto w-full object-cover"
+              className="h-72 w-full object-cover object-center sm:h-96 lg:h-[560px]"
               priority
             />
           </div>
