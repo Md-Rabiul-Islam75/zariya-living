@@ -23,13 +23,15 @@ export function OffersFooter() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-8">
           {/* Brand */}
           <div className="lg:col-span-4">
-            <Image
-              src="/images/logo/zariya-sylhet-logo.png"
-              alt="Zariya Sylhet Resort & Villas"
-              width={1939}
-              height={513}
-              className="h-14 w-auto object-contain brightness-0 invert"
-            />
+            <Link href="/" aria-label="Zariya Living, home">
+              <Image
+                src="/images/logo/zariya-living-white.png"
+                alt="Zariya Living"
+                width={1945}
+                height={505}
+                className="h-14 w-auto object-contain"
+              />
+            </Link>
             <p className="mt-6 max-w-xs text-lg italic leading-relaxed text-gold">
               Zariya. Belonging Today. Legacy Tomorrow.
             </p>

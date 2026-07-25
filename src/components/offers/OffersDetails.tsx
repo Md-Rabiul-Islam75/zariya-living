@@ -27,7 +27,7 @@ export function AgroIncludes() {
     <section className="bg-teal-deep py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-6 lg:px-10">
         <Reveal direction="up">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">{agro.eyebrow}</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">{agro.eyebrow}</p>
         </Reveal>
         <div className="mt-5 grid items-start gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
           <Reveal direction="up" delay={0.05}>
@@ -49,7 +49,7 @@ export function ResortIncludes() {
     <section className="bg-[#f7f1e6] py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-6 lg:px-10">
         <Reveal direction="up">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal-deep/55">{resort.eyebrow}</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-deep/55">{resort.eyebrow}</p>
         </Reveal>
         <div className="mt-5 grid items-start gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           <Reveal direction="up" delay={0.05} className="lg:order-2">
@@ -76,7 +76,7 @@ export function Returns() {
     <section className="bg-teal-deep py-20 md:py-28">
       <div className="mx-auto max-w-3xl px-6 lg:px-10">
         <Reveal direction="up" className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">{returns.eyebrow}</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">{returns.eyebrow}</p>
           <h2 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">{returns.title}</h2>
           <p className="mx-auto mt-4 max-w-[60ch] text-[15px] leading-relaxed text-white/60">{returns.desc}</p>
         </Reveal>
@@ -112,7 +112,7 @@ export function SecurityTimeline() {
     <section className="bg-white py-20 md:py-28">
       <div className="mx-auto max-w-5xl px-6 lg:px-10">
         <Reveal direction="up" className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-teal-deep/55">{security.eyebrow}</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-teal-deep/55">{security.eyebrow}</p>
           <h2 className="mt-4 text-3xl font-semibold leading-tight text-teal-deep sm:text-4xl">{security.title}</h2>
           <p className="mx-auto mt-4 max-w-[66ch] text-base leading-relaxed text-teal-deep/70">{security.desc}</p>
         </Reveal>

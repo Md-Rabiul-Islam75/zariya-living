@@ -18,7 +18,7 @@ export function Resort() {
               <Parallax distance={50} className="absolute inset-0">
                 <Image
                   src="/images/lotus-tower.png"
-                  alt="The Lotus Tower at Zariya Resort"
+                  alt="The Tea Tower at Zariya Resort"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="scale-110 object-cover"
@@ -35,7 +35,7 @@ export function Resort() {
             </Reveal>
             <Reveal direction="up" delay={0.05}>
               <h2 className="font-serif text-3xl font-light leading-tight text-foreground sm:text-4xl md:text-5xl">
-                The Lotus Tower, the heart of everything Zariya offers.
+                The Tea Tower, the heart of everything Zariya offers.
               </h2>
             </Reveal>
             <Reveal direction="up" delay={0.12}>

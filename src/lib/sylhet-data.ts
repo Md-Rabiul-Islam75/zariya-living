@@ -13,7 +13,7 @@ export const SYLHET = {
     title: "Not Just a Resort. A Place to Belong.",
     paragraphs: [
       "Zariya Sylhet Resort & Villas is designed for people seeking more than luxury, peace, emotional connection, wellness, and meaningful living. Set across a thoughtfully planned masterplan in Sylhet, it brings together culture, nature, recreation, and hospitality in a way that has never been done before in Bangladesh.",
-      "At the centre of it all stands the Lotus Tower, an iconic landmark visible for miles, and the heart of everything Zariya offers.",
+      "At the centre of it all stands the Tea Tower, an iconic landmark visible for miles, and the heart of everything Zariya offers.",
     ],
     cards: [
       { label: "Location", value: "Sylhet, Bangladesh, 10 minutes from the airport" },

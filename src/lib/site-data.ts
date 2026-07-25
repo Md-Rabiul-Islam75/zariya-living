@@ -21,7 +21,7 @@ export const HERO_SLIDES = [
     category: "Hospitality",
     title: "Zariya Resort",
     description:
-      "A five-star resort crowned by the Lotus Tower, with observation decks, sky lounges, fine dining, and wellness.",
+      "A five-star resort crowned by the Tea Tower, with observation decks, sky lounges, fine dining, and wellness.",
     image: "/images/resort-pool.png",
   },
   {
@@ -50,10 +50,9 @@ export const CONTACT = {
 } as const;
 
 export const SOCIAL_LINKS = [
-  { label: "Facebook", href: "https://facebook.com", icon: "facebook" },
-  { label: "YouTube", href: "https://youtube.com", icon: "youtube" },
-  { label: "Instagram", href: "https://instagram.com", icon: "instagram" },
-  { label: "LinkedIn", href: "https://linkedin.com", icon: "linkedin" },
+  { label: "Facebook", href: "https://www.facebook.com/zariya.living", icon: "facebook" },
+  { label: "YouTube", href: "https://www.youtube.com/@ZariyaLiving", icon: "youtube" },
+  { label: "Instagram", href: "https://www.instagram.com/zariya_livingltd", icon: "instagram" },
 ] as const;
 
 export const LEGAL_LINKS = [
@@ -76,7 +75,7 @@ export const NAV_LINKS: NavLink[] = [
     label: "Projects",
     href: "/projects",
     children: [
-      { label: "Flagship, Sylhet", href: "/projects/sylhet" },
+      { label: "Zariya Resort & Villas, Sylhet", href: "/projects/sylhet" },
       { label: "Niladri", href: "/projects/niladri", soon: true },
       { label: "Noakhali", href: "/projects/noakhali", soon: true },
       { label: "Cox's Bazar", href: "/projects/coxs-bazar", soon: true },
@@ -94,7 +93,7 @@ export const PILLARS = [
     eyebrow: "Hospitality",
     title: "Zariya Resort",
     description:
-      "A flagship hospitality landmark crowned by the Lotus Tower, observation decks, sky lounges, fine dining, and wellness, all visible for miles.",
+      "A flagship hospitality landmark crowned by the Tea Tower, observation decks, sky lounges, fine dining, and wellness, all visible for miles.",
     image: "/images/lotus-tower.png",
     cta: "Explore the Resort",
   },
@@ -374,7 +373,7 @@ export const VISIT_TOUR = {
   image: "/images/sky-lounge.jpg",
   body: "Confirmed bookings include a complimentary By-Air Sylhet Experience Tour. We fly you in, host you at the land, walk you through the masterplan, and show you the Sylhet that inspired Zariya, its shrines, its tea gardens, its quiet beauty.",
   points: [
-    "Guided walk of the masterplan and the Lotus Tower site",
+    "Guided walk of the masterplan and the Tea Tower site",
     "A taste of Zariya Agro's farm-fresh hospitality",
     "A private consultation, no pressure, just clarity",
   ],
@@ -485,10 +484,10 @@ export const TOWNSHIP_HERO = {
 
 export const TOWNSHIP_TOWER = {
   eyebrow: "The Heart of Zariya",
-  title: "The Lotus Tower",
+  title: "The Tea Tower",
   image: "/images/lotus-tower.png",
   paragraphs: [
-    "Rising from the centre of the masterplan, the Lotus Tower is more than a landmark. Inspired by the lotus, a flower that grows in still water and opens toward the light, it is a symbol of everything Zariya stands for: rootedness, renewal, and quiet strength.",
+    "Rising from the centre of the masterplan, the Tea Tower is more than a landmark. Inspired by the tea gardens that shape Sylhet's hills and the still waters that cradle them, it is a symbol of everything Zariya stands for: rootedness, renewal, and quiet strength.",
     "Inside, it houses the Observation Deck, the Sky Lounge, and the resort's most elevated experiences. Visible for miles across the Sylhet landscape, it is the first thing you see as you arrive, and the place you will return to again and again.",
   ],
 } as const;
@@ -502,7 +501,7 @@ export const TOWNSHIP_ZONES = [
   {
     icon: "resort",
     title: "Resort Core",
-    desc: "The Lotus Tower, lobby, dining, wellness, and event venues at the centre.",
+    desc: "The Tea Tower, lobby, dining, wellness, and event venues at the centre.",
   },
   {
     icon: "agro",

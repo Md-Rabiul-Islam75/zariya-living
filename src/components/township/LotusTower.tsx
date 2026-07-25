@@ -12,7 +12,7 @@ export function LotusTower() {
           <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl">
             <Image
               src={TOWNSHIP_TOWER.image}
-              alt="The Lotus Tower"
+              alt="The Tea Tower"
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"

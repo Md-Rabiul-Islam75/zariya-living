@@ -60,7 +60,7 @@ export const OFFERS = {
   },
 
   agro: {
-    eyebrow: "Section 01 · Agro Ownership",
+    eyebrow: "Agro Ownership",
     title: "What Your Agro Ownership Includes",
     desc: "Your plot of certified organic farmland in Zariya's export-oriented agro ecosystem, earning income, feeding families, and growing your legacy through the soil.",
     items: [
@@ -74,7 +74,7 @@ export const OFFERS = {
   },
 
   resort: {
-    eyebrow: "Section 02 · Resort Ownership",
+    eyebrow: "Resort Ownership",
     title: "What Your Resort Ownership Includes",
     desc: "A complimentary gift reserved exclusively for Founding Members, resort construction ownership in the heart of Sylhet, backed by a structured buyback guarantee.",
     items: [
@@ -89,7 +89,7 @@ export const OFFERS = {
   },
 
   returns: {
-    eyebrow: "Section 05 · Returns",
+    eyebrow: "Returns",
     title: "Potential Annual Returns",
     desc: "Conservative estimates across income streams, savings, and membership privileges from both ownerships.",
     rows: [
@@ -106,7 +106,7 @@ export const OFFERS = {
   },
 
   security: {
-    eyebrow: "Section 06 · Security",
+    eyebrow: "Security",
     title: "Protected Exit Option: 3-Year Buyback Guarantee",
     desc: "After 3 years, eligible members may return their complimentary Resort Ownership to Zariya Living Ltd at BDT 6,00,000. A structured, written guarantee, because your trust deserves more than a promise.",
     steps: [
@@ -132,7 +132,7 @@ export const OFFERS = {
   },
 
   payment: {
-    eyebrow: "Section 08 · Payment Plan",
+    eyebrow: "Payment Plan",
     title: "Easy Ownership Entry: Three-Step Payment Plan",
     summary: [
       { label: "Total Ownership Value", value: "BDT 12,00,000" },

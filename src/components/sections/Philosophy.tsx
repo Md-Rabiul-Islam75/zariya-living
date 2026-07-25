@@ -68,12 +68,12 @@ export function Philosophy() {
         <Reveal direction="left" delay={0.1}>
           <div className="overflow-hidden rounded-2xl">
             <Image
-              src="/images/masterplan.png"
+              src="/images/why-zariya-exist-section.jpeg"
               alt="Zariya masterplan aerial view"
-              width={1535}
-              height={1024}
+              width={1640}
+              height={720}
               sizes="(max-width: 1024px) 100vw, 50vw"
-              className="h-auto w-full object-contain"
+              className="h-auto w-full object-cover"
               priority
             />
           </div>

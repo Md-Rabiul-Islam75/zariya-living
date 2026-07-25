@@ -177,7 +177,6 @@ export function Footer() {
               <p className="text-xs font-normal text-white">
                 © {new Date().getFullYear()} Zariya Living Ltd.
               </p>
-              <BackToTop />
             </div>
           </div>
 
@@ -270,16 +269,3 @@ function FooterContactForm() {
   );
 }
 
-function BackToTop() {
-  return (
-    <button
-      type="button"
-      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      aria-label="Back to top"
-      className="group flex items-center gap-1.5 text-xs font-normal text-white transition-colors hover:text-teal-panel"
-    >
-      Top
-      <span className="transition-transform duration-300 group-hover:-translate-y-1">↑</span>
-    </button>
-  );
-}

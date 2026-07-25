@@ -10,7 +10,7 @@ import { EverythingWithinReach } from "@/components/township/EverythingWithinRea
 export const metadata: Metadata = {
   title: "Township & Amenities — Zariya Living",
   description:
-    "Every road, every garden, every sightline — designed for peace that lasts a hundred years. Explore the Lotus Tower, the four masterplan zones, ownership inventory, and amenities.",
+    "Every road, every garden, every sightline — designed for peace that lasts a hundred years. Explore the Tea Tower, the four masterplan zones, ownership inventory, and amenities.",
 };
 
 export default function TownshipPage() {

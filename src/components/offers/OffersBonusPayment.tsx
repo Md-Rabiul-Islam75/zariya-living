@@ -16,7 +16,7 @@ export function SpecialBonus() {
 
       <div className="relative z-10 mx-auto max-w-3xl px-6 text-center lg:px-10">
         <Reveal direction="up">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">{bonus.eyebrow}</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">{bonus.eyebrow}</p>
           <h2 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">{bonus.title}</h2>
           <p className="mt-4 text-base leading-relaxed text-white/75">{bonus.desc}</p>
         </Reveal>
@@ -45,7 +45,7 @@ export function PaymentPlan() {
     <section className="bg-[#0e332e] py-20 md:py-28">
       <div className="mx-auto max-w-4xl px-6 lg:px-10">
         <Reveal direction="up" className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gold">{payment.eyebrow}</p>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gold">{payment.eyebrow}</p>
           <h2 className="mt-4 text-3xl font-semibold text-white sm:text-4xl">{payment.title}</h2>
           <div className="mt-5 flex flex-wrap justify-center gap-x-7 gap-y-2 text-sm text-white/65">
             {payment.summary.map((s) => (
