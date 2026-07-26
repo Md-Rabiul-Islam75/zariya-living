@@ -263,7 +263,7 @@ export const TESTIMONIALS = [
   {
     quote:
       "My children grew up speaking another language, in another country. Zariya is the first place that feels like ours, somewhere they can finally call home.",
-    name: "Mirza Tanzir Ahmed",
+    name: "Taskin Ahmed",
     role: "Entrepreneur",
     location: "London",
   },
