@@ -46,17 +46,14 @@ export function Navbar() {
       }`}
     >
       <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5 lg:px-10">
-        <Link href="/" aria-label="Zariya Sylhet Resort & Villas, home">
+        <Link href="/" aria-label="Zariya Living, home">
           <Image
-            src="/images/logo/zariya-sylhet-logo.png"
-            alt="Zariya Sylhet Resort & Villas"
-            width={1939}
-            height={513}
+            src="/images/logo/zariya-living-white.png"
+            alt="Zariya Living"
+            width={1945}
+            height={505}
             priority
-            // Dark logo art: render it white while over the banner, natural on the solid bar.
-            className={`h-8 w-auto object-contain transition-[filter] duration-500 sm:h-10 ${
-              solid ? "" : "brightness-0 invert"
-            }`}
+            className="h-8 w-auto object-contain sm:h-10"
           />
         </Link>
 

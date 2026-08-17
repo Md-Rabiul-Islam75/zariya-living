@@ -10,10 +10,8 @@ export function FounderLetter() {
     <section className="bg-teal-deep py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-6 lg:px-10">
         <Reveal direction="up" className="flex flex-col items-center text-center">
-          <div className="mb-5 flex items-center gap-4">
-            <span className="h-px w-10 bg-gold/60" />
-            <span className="text-xs font-semibold uppercase tracking-[0.35em] text-gold">{f.eyebrow}</span>
-            <span className="h-px w-10 bg-gold/60" />
+          <div className="mb-5">
+            <span className="text-sm font-semibold uppercase tracking-[0.35em] text-gold">{f.eyebrow}</span>
           </div>
         </Reveal>
         <Reveal direction="up" delay={0.05} className="text-center">

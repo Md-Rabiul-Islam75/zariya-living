@@ -52,12 +52,12 @@ export function Footer() {
             viewport={{ once: false, amount: 0.4 }}
             className="lg:col-span-4"
           >
-            <Link href="/" aria-label="Zariya Sylhet Resort & Villas, home" className="inline-block">
+            <Link href="/" aria-label="Zariya Living, home" className="inline-block">
               <Image
-                src="/images/logo/zariya-sylhet-logo.png"
-                alt="Zariya Sylhet Resort & Villas"
-                width={1939}
-                height={513}
+                src="/images/logo/zariya-living-white.png"
+                alt="Zariya Living"
+                width={1945}
+                height={505}
                 className="h-16 w-auto object-contain"
               />
             </Link>

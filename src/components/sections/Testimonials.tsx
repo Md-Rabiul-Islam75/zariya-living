@@ -15,10 +15,8 @@ export function Testimonials() {
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
         {/* Heading with flanking gold lines */}
         <Reveal direction="up" className="flex flex-col items-center text-center">
-          <div className="mb-5 flex items-center gap-4">
-            <span className="h-px w-10 bg-gold/60" />
-            <span className="text-xs font-light uppercase tracking-[0.35em] text-gold">In Their Words</span>
-            <span className="h-px w-10 bg-gold/60" />
+          <div className="mb-5">
+            <span className="text-sm font-light uppercase tracking-[0.35em] text-gold">In Their Words</span>
           </div>
         </Reveal>
         <Reveal direction="up" delay={0.05} className="text-center">
@@ -54,9 +52,8 @@ export function Testimonials() {
                 </blockquote>
 
                 <figcaption className="mt-8 border-t border-gold/15 pt-5">
-                  <div className="font-serif text-lg font-light text-foreground">{t.name}</div>
-                  <div className="mt-1 text-xs uppercase tracking-[0.2em] text-gold/80">
-                    {t.role} · {t.location}
+                  <div className="text-xs uppercase tracking-[0.2em] text-gold/80">
+                    — {t.role}, {t.location}
                   </div>
                 </figcaption>
               </motion.figure>

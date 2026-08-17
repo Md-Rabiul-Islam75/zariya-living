@@ -11,8 +11,8 @@ export function Privileges() {
     <section className="bg-teal-deep py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal direction="up" className="text-center">
-          <span className="text-xs font-medium uppercase tracking-[0.3em] text-gold">
-            Global Lagoon Villa Membership, Privileges
+          <span className="text-sm font-medium uppercase tracking-[0.3em] text-gold">
+            Global Lagoon Villa Membership — Privileges
           </span>
         </Reveal>
 
@@ -31,7 +31,7 @@ export function Privileges() {
                   {item.category}
                 </span>
                 <h3 className="mt-3 font-serif text-2xl font-light text-foreground">{item.title}</h3>
-                <p className="mt-4 text-sm font-light leading-relaxed text-foreground/70">
+                <p className="mt-4 text-sm font-light leading-relaxed text-foreground/90">
                   {item.description}
                 </p>
               </motion.article>
@@ -41,7 +41,7 @@ export function Privileges() {
 
         <Reveal direction="up" className="mt-14 text-center">
           <Link
-            href="#villas"
+            href="/community"
             className="inline-flex items-center gap-2 rounded-md bg-gold px-8 py-3.5 text-xs font-medium uppercase tracking-[0.18em] text-teal-deep transition-transform duration-300 hover:scale-105"
           >
             Explore the Lagoon Community

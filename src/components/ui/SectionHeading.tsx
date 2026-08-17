@@ -14,18 +14,22 @@ export function SectionHeading({
   dark?: boolean;
 }) {
   const alignClass = align === "center" ? "items-center text-center mx-auto" : "items-start text-left";
-  const titleColor = dark ? "text-teal-deep" : "text-foreground";
-  const introColor = dark ? "text-teal-deep/70" : "text-foreground/70";
+  const titleColor = dark ? "text-ink" : "text-foreground";
+  const introColor = dark ? "text-ink/80" : "text-foreground/85";
 
   return (
     <div className={`flex max-w-3xl flex-col ${alignClass}`}>
       {eyebrow && (
         <Reveal direction="up">
-          <span className="mb-4 text-xs font-light uppercase tracking-[0.35em] text-gold">{eyebrow}</span>
+          <span className={`mb-4 text-sm uppercase tracking-[0.35em] text-gold ${dark ? "font-semibold" : "font-light"}`}>
+            {eyebrow}
+          </span>
         </Reveal>
       )}
       <Reveal direction="up" delay={0.05}>
-        <h2 className={`font-serif text-3xl font-light leading-tight sm:text-4xl md:text-5xl ${titleColor}`}>
+        <h2
+          className={`font-serif text-3xl leading-tight sm:text-4xl md:text-5xl ${dark ? "font-medium" : "font-light"} ${titleColor}`}
+        >
           {title}
         </h2>
       </Reveal>
