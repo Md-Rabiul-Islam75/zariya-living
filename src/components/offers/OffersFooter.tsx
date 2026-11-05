@@ -5,6 +5,7 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, type FormEvent } from "react";
 import { SocialIcon } from "@/components/ui/SocialIcon";
+import { sendLead } from "@/lib/lead";
 import { NAV_LINKS, PROJECTS, CONTACT, SOCIAL_LINKS, LEGAL_LINKS } from "@/lib/site-data";
 
 const WHATSAPP_HREF = `https://wa.me/${CONTACT.whatsapp}`;
@@ -144,9 +145,13 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
 
 function FooterForm() {
   const [sent, setSent] = useState(false);
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  const [failed, setFailed] = useState(false);
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSent(true);
+    setFailed(false);
+    const delivered = await sendLead("offers-footer", Object.fromEntries(new FormData(e.currentTarget)));
+    if (delivered) setSent(true);
+    else setFailed(true);
   }
   const input =
     "w-full border-b border-gold/30 bg-transparent py-2 text-sm text-white placeholder:text-white/40 outline-none transition-colors focus:border-gold";
@@ -159,11 +164,16 @@ function FooterForm() {
           </motion.p>
         ) : (
           <motion.form key="f" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onSubmit={handleSubmit} className="flex flex-col gap-3">
-            <input type="email" required placeholder="Email" className={input} />
-            <input type="text" placeholder="Message" className={input} />
+            <input type="email" name="email" required placeholder="Email" className={input} />
+            <input type="text" name="message" placeholder="Message" className={input} />
             <button type="submit" className="mt-1 w-fit rounded-sm bg-gold px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.05em] text-teal-deep">
               Send Message
             </button>
+            {failed && (
+              <p role="alert" className="text-sm text-gold">
+                Sorry, we could not send that. Please call or WhatsApp us on {CONTACT.phone}.
+              </p>
+            )}
           </motion.form>
         )}
       </AnimatePresence>

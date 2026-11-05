@@ -1,0 +1,385 @@
+/*
+ * Zariya V2 design system.
+ *
+ * Ported from the global <style> block of the design handoff
+ * (Zariya Living V2.dc.html). The data-* responsive rules are kept as they are
+ * in the design so that every breakpoint behaves exactly the same.
+ *
+ * Everything is scoped under .z2 so the /offers page is not affected.
+ */
+
+/* Unlayered, so it wins over the smooth scrolling that /offers uses. */
+html:has(.z2) {
+  scroll-behavior: auto;
+}
+html:has(.z2) body {
+  background: #ffffff;
+}
+
+@layer base {
+  .z2 {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+    color: #092c2c;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: normal;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .z2 ::selection {
+    background: #dfc1a5;
+    color: #092c2c;
+  }
+
+  .z2 :focus-visible {
+    outline: 2px solid #dfc1a5;
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .z2 [data-clickable] {
+    outline-offset: 4px;
+  }
+
+  /* The design has no CSS reset: undo the Tailwind defaults it does not expect. */
+  .z2 svg,
+  .z2 img,
+  .z2 video {
+    display: inline;
+    vertical-align: baseline;
+  }
+
+  /* line-height matches the height these fields have in the design. */
+  .z2 input,
+  .z2 select {
+    line-height: 1.15;
+  }
+
+  .z2 input,
+  .z2 select,
+  .z2 textarea {
+    font-weight: 400;
+  }
+
+  .z2 ::placeholder {
+    color: #757575;
+    opacity: 1;
+  }
+
+  .z2 select option {
+    color: #092c2c;
+  }
+}
+
+@layer components {
+  .z-btn {
+    display: inline-block;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    transition:
+      background 0.35s ease,
+      color 0.35s ease,
+      border-color 0.35s ease,
+      transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 0.35s ease;
+  }
+
+  /* Gold solid */
+  .z-btn-gold {
+    background: #dfc1a5;
+    color: #092c2c;
+  }
+  .z-btn-gold:hover {
+    background: #ffffff;
+    color: #092c2c;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px rgba(223, 193, 165, 0.35);
+  }
+
+  /* Green solid */
+  .z-btn-green {
+    background: #092c2c;
+    color: #ffffff;
+  }
+  .z-btn-green:hover {
+    box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.1);
+  }
+
+  /* Green solid that lifts on hover */
+  .z-btn-green-lift {
+    background: #092c2c;
+    color: #ffffff;
+  }
+  .z-btn-green-lift:hover {
+    background: #114747;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px rgba(9, 44, 44, 0.28);
+  }
+
+  /* Gold outline, on dark */
+  .z-btn-gold-line {
+    background: transparent;
+    color: #dfc1a5;
+    border: 1.5px solid #dfc1a5;
+  }
+  .z-btn-gold-line:hover {
+    background: #dfc1a5;
+    color: #092c2c;
+    border-color: #dfc1a5;
+    transform: translateY(-2px);
+    box-shadow: 0 14px 34px rgba(223, 193, 165, 0.3);
+  }
+
+  /* Dark outline, on light */
+  .z-btn-dark-line {
+    background: transparent;
+    color: #092c2c;
+    border: 1.5px solid #092c2c;
+  }
+  .z-btn-dark-line:hover {
+    background: #092c2c;
+    color: #ffffff;
+    border-color: #092c2c;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(9, 44, 44, 0.22);
+  }
+}
+
+/* ---- Scroll progress bar ---- */
+#zprog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  background: linear-gradient(90deg, #dfc1a5, #f3dcc4);
+  z-index: 1300;
+  pointer-events: none;
+}
+
+/* ---- Skip link ---- */
+.z-skip {
+  position: fixed;
+  top: -60px;
+  left: 16px;
+  z-index: 2000;
+  background: #dfc1a5;
+  color: #092c2c;
+  font-weight: 600;
+  font-size: 16.5px;
+  padding: 12px 20px;
+  border-radius: 3px;
+  transition: top 0.2s ease;
+}
+.z-skip:focus {
+  top: 12px;
+}
+
+/* ---- Scroll reveal ----
+   Hide reveal blocks before the first paint, but only once JS is confirmed, so
+   the content stays visible if JavaScript never runs. */
+html[data-zjs] .z2 [data-reveal]:not([data-revealed]) {
+  opacity: 0;
+}
+
+/* ---- Cards that turn green on hover ---- */
+[data-greenhover] {
+  transition:
+    background-color 0.45s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease !important;
+}
+[data-greenhover] h3,
+[data-greenhover] p,
+[data-greenhover] span {
+  transition: color 0.45s ease;
+}
+[data-greenhover] svg * {
+  transition: stroke 0.45s ease;
+}
+[data-greenhover]:hover {
+  background-color: #092c2c !important;
+  border-color: #dfc1a5 !important;
+}
+[data-greenhover]:hover h3 {
+  color: #ffffff !important;
+}
+[data-greenhover]:hover p {
+  color: rgba(255, 255, 255, 0.86) !important;
+}
+[data-greenhover]:hover span {
+  color: #dfc1a5 !important;
+}
+[data-greenhover]:hover svg * {
+  stroke: #dfc1a5 !important;
+}
+
+/* ---- Keyframes ---- */
+@keyframes zfill {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes zbob {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translateY(9px);
+    opacity: 0.4;
+  }
+}
+@keyframes zglow {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+@keyframes zspin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---- Responsive rules, as in the design ---- */
+@media (max-width: 600px) {
+  [data-herodots],
+  [data-herodiv] {
+    display: none !important;
+  }
+}
+
+@media (max-width: 920px) {
+  [data-desk] {
+    display: none !important;
+  }
+  [data-mob] {
+    display: inline-flex !important;
+  }
+  [data-grid] {
+    grid-template-columns: 1fr !important;
+  }
+  [data-2col] {
+    grid-template-columns: 1fr !important;
+    gap: 36px !important;
+  }
+  [data-tinum] {
+    font-size: 72px !important;
+  }
+  [data-tistick] {
+    position: relative !important;
+    top: auto !important;
+  }
+  [data-tiimg] {
+    position: relative !important;
+    top: auto !important;
+    flex: none !important;
+    min-height: 0 !important;
+  }
+  [data-container] {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+  [data-sec] {
+    padding-top: 76px !important;
+    padding-bottom: 76px !important;
+  }
+  [data-h1] {
+    font-size: 46px !important;
+  }
+  [data-h2] {
+    font-size: 34px !important;
+  }
+  [data-hero] {
+    min-height: 92vh !important;
+  }
+  [data-mobcta] {
+    display: flex !important;
+  }
+  [data-revrap] {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+[data-navlinks] > a,
+[data-navlinks] > div > a {
+  white-space: nowrap;
+  font-size: 15.5px !important;
+}
+
+@media (max-width: 1400px) {
+  [data-navbadge] {
+    display: none !important;
+  }
+  [data-navlinks] {
+    gap: 20px !important;
+  }
+}
+@media (max-width: 1200px) {
+  [data-navlinks] [data-navopt] {
+    display: none !important;
+  }
+}
+@media (max-width: 1100px) {
+  [data-navlinks] [data-navopt] {
+    display: none !important;
+  }
+  [data-navcta] {
+    padding: 12px 16px !important;
+  }
+  [data-navlinks] {
+    gap: 16px !important;
+  }
+  [data-navlinks] > a,
+  [data-navlinks] > div > a {
+    font-size: 14.5px !important;
+  }
+  [data-navwa] {
+    display: none !important;
+  }
+}
+@media (min-width: 921px) {
+  [data-mob] {
+    display: none !important;
+  }
+  [data-mobcta] {
+    display: none !important;
+  }
+}
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .z2 * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .z2 [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    clip-path: none !important;
+  }
+  #zprog {
+    display: none;
+  }
+}
