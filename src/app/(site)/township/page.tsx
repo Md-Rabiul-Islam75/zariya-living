@@ -122,9 +122,9 @@ const TH =
 const TD = "px-7 py-[22px] text-[17px]";
 
 const INVENTORY = [
-  { type: "Lagoon Villa Share", size: "2,200 sq ft duplex", units: "Limited", status: "Limited", tint: ".16" },
-  { type: "Resort Share", size: "20 sq ft + common", units: "Limited release", status: "Available", tint: ".1" },
-  { type: "Agro Share", size: "1 decimal", units: "Limited release", status: "Available", tint: ".1" },
+  { type: "Lagoon Villa Share", size: "2,200 sq ft duplex", units: "Limited", status: "Limited", tint: ".45" },
+  { type: "Resort Share", size: "20 sq ft + common", units: "Limited release", status: "Available", tint: ".3" },
+  { type: "Agro Share", size: "1 decimal", units: "Limited release", status: "Available", tint: ".3" },
 ];
 
 function Inventory() {
@@ -174,7 +174,7 @@ function Inventory() {
                   </td>
                   <td className="px-7 py-[22px]">
                     <span
-                      className="rounded-[20px] px-3 py-[5px] text-[14px] font-semibold tracking-[.05em] text-z-gold uppercase"
+                      className="rounded-[20px] px-3 py-[5px] text-[14px] font-semibold tracking-[.05em] text-z-green uppercase"
                       style={{ background: `rgba(223,193,165,${row.tint})` }}
                     >
                       {row.status}
