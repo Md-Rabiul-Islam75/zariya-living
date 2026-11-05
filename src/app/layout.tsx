@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Rajdhani } from "next/font/google";
 import "./globals.css";
-import { ScrollToTop } from "@/components/ui/ScrollToTop";
 
 const rajdhani = Rajdhani({
   variable: "--font-rajdhani",
@@ -24,12 +23,13 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${rajdhani.variable} h-full antialiased`}
+      data-scroll-behavior="smooth"
+      suppressHydrationWarning
     >
       {/* Browser extensions (e.g. Grammarly) inject attributes on <body> before
           hydration; suppress the resulting attribute-mismatch warning. */}
       <body className="min-h-full flex flex-col overflow-x-clip" suppressHydrationWarning>
         {children}
-        <ScrollToTop />
       </body>
     </html>
   );

@@ -9,6 +9,10 @@ services:
     # Host 8010 -> container 8010 (app listens on 8010 inside the container too)
     ports:
       - "8010:8010"
+    # Mail settings for the enquiry forms (see .env.example).
+    env_file:
+      - path: .env
+        required: false
     environment:
       - NODE_ENV=production
       - NEXT_TELEMETRY_DISABLED=1

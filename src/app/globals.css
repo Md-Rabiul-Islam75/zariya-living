@@ -26,6 +26,12 @@
   --color-ink: var(--ink);
   --color-muted: var(--muted);
 
+  /* V2 palette (design handoff). */
+  --color-z-deep: #092c2c;
+  --color-z-green: #114747;
+  --color-z-gold: #dfc1a5;
+  --color-z-ivory: #f5f1eb;
+
   /* Single typeface across the whole site (Rajdhani). Both the serif and sans
      tokens map to it so every `font-serif`/`font-sans` utility is consistent. */
   --font-serif: var(--font-rajdhani);
