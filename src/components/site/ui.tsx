@@ -1,5 +1,11 @@
 import type { HTMLAttributes, ReactNode } from "react";
 
+/** Field styles for the enquiry forms on dark sections. */
+export const FORM_LABEL = "text-[14px] font-semibold tracking-[.1em] text-z-gold uppercase";
+export const FORM_TEXTAREA =
+  "resize-y border-b border-solid border-[rgba(223,193,165,.35)] bg-transparent px-[2px] py-[11px] text-[18px] text-white outline-none focus:border-z-gold";
+export const FORM_FIELD = `${FORM_TEXTAREA} leading-[21px]`;
+
 /** The 1320px page container. `data-container` handles the mobile side padding. */
 export function Container({
   children,
@@ -10,6 +16,50 @@ export function Container({
     <div data-container="" className={`mx-auto max-w-[1320px] px-12 ${className}`} {...rest}>
       {children}
     </div>
+  );
+}
+
+/**
+ * The inner-page hero: a full-bleed media layer with a colour overlay, and the
+ * title sitting at the bottom. `media` goes in the parallax layer.
+ */
+export function PageHero({
+  height,
+  background,
+  overlay,
+  media,
+  paddingBottom = "pb-20",
+  children,
+}: {
+  height: string;
+  background: string;
+  overlay: string;
+  media: ReactNode;
+  paddingBottom?: string;
+  children: ReactNode;
+}) {
+  return (
+    <section data-hero="" className={`relative flex items-end overflow-hidden ${height}`}>
+      <div
+        data-parallax=""
+        className="absolute inset-0 will-change-transform"
+        style={{ background }}
+      >
+        {media}
+      </div>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{ background: overlay }}
+      />
+      <div
+        data-revrap=""
+        data-container=""
+        className={`relative z-[2] mx-auto w-full max-w-[1320px] px-12 ${paddingBottom}`}
+      >
+        {children}
+      </div>
+    </section>
   );
 }
 

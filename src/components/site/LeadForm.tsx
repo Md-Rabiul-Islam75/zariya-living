@@ -2,7 +2,7 @@
 
 import { useRef, type CSSProperties, type FormEvent, type ReactNode } from "react";
 import { showToast } from "@/components/site/Toast";
-import { HONEYPOT_FIELD, type LeadKind } from "@/lib/lead";
+import { HONEYPOT_FIELD, sendLead, type LeadKind } from "@/lib/lead";
 import { CONTACT } from "@/lib/site-data";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -64,26 +64,21 @@ export function LeadForm({
 
     const submitter = (e.nativeEvent as SubmitEvent).submitter;
     sending.current = true;
-    try {
-      const res = await fetch("/api/lead", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          kind,
-          request: submitter?.textContent?.trim() ?? "",
-          fields: Object.fromEntries(new FormData(form)),
-        }),
-      });
-      if (!res.ok) throw new Error(`Lead request failed: ${res.status}`);
+    const sent = await sendLead(
+      kind,
+      Object.fromEntries(new FormData(form)),
+      submitter?.textContent?.trim() ?? "",
+    );
+    sending.current = false;
+
+    if (sent) {
       showToast("Thank you. Our team will be in touch with you shortly.");
       form.reset();
-    } catch {
+    } else {
       showToast(
         `Sorry, we could not send that. Please call or WhatsApp us on ${CONTACT.phone}.`,
         "error",
       );
-    } finally {
-      sending.current = false;
     }
   }
 

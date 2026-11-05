@@ -3,15 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { HeroVideo } from "@/components/site/HeroVideo";
 import { LeadForm } from "@/components/site/LeadForm";
-import { Container, Eyebrow } from "@/components/site/ui";
+import { Container, Eyebrow, FORM_FIELD, FORM_LABEL } from "@/components/site/ui";
 
 export const metadata: Metadata = {
   title: "Zariya — Where Do I Truly Belong?",
-  openGraph: {
-    title: "Zariya Living — Belonging Today. Legacy Tomorrow.",
-    description:
-      "Own an Agro Share in Zariya's farm-to-family model, and explore the Sylhet Resort & Villas.",
-  },
 };
 
 const INK = "rgba(9,44,44,.88)";
@@ -807,10 +802,6 @@ function Stories() {
     </section>
   );
 }
-
-const FORM_LABEL = "text-[14px] font-semibold tracking-[.1em] text-z-gold uppercase";
-const FORM_FIELD =
-  "border-b border-solid border-[rgba(223,193,165,.35)] bg-transparent px-[2px] py-[11px] text-[18px] leading-[21px] text-white outline-none focus:border-z-gold";
 
 const FORM_INPUTS = [
   { name: "name", label: "Full Name", type: "text", placeholder: "Your name" },

@@ -10,6 +10,26 @@ export const LEAD_KINDS = {
   "projects-notify": "New projects notification",
   "community-join": "Community join request",
   "events-notify": "Events notification",
+  "offers-apply": "Founding 10 application",
+  "offers-footer": "Founding 10 footer message",
 } as const;
 
 export type LeadKind = keyof typeof LEAD_KINDS;
+
+/** Sends an enquiry to /api/lead. Returns false if it could not be delivered. */
+export async function sendLead(
+  kind: LeadKind,
+  fields: Record<string, FormDataEntryValue>,
+  request = "",
+) {
+  try {
+    const res = await fetch("/api/lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ kind, request, fields }),
+    });
+    return res.ok;
+  } catch {
+    return false;
+  }
+}

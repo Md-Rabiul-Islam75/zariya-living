@@ -12,7 +12,7 @@ const FADE_SECONDS = 1.2;
  * The second copy only starts downloading once the first is playing, so it never
  * competes with the first paint.
  */
-export function HeroVideo({ name }: { name: string }) {
+export function HeroVideo({ name, position }: { name: string; position?: string }) {
   const first = useRef<HTMLVideoElement>(null);
   const second = useRef<HTMLVideoElement>(null);
 
@@ -112,7 +112,7 @@ export function HeroVideo({ name }: { name: string }) {
         {...shared}
         autoPlay
         preload="auto"
-        style={{ transition: `opacity ${FADE_SECONDS}s linear` }}
+        style={{ objectPosition: position, transition: `opacity ${FADE_SECONDS}s linear` }}
       >
         {sources}
       </video>
@@ -120,7 +120,7 @@ export function HeroVideo({ name }: { name: string }) {
         ref={second}
         {...shared}
         preload="none"
-        style={{ opacity: 0, transition: `opacity ${FADE_SECONDS}s linear` }}
+        style={{ objectPosition: position, opacity: 0, transition: `opacity ${FADE_SECONDS}s linear` }}
       >
         {sources}
       </video>

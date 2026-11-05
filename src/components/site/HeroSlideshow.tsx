@@ -47,12 +47,14 @@ export function HeroSlideshow({
   label,
   background,
   glow,
+  paddingBottom = "pb-20",
   children,
 }: {
   slides: Slide[];
   label: string;
   background: string;
   glow?: boolean;
+  paddingBottom?: string;
   children: ReactNode;
 }) {
   const count = slides.length;
@@ -146,7 +148,7 @@ export function HeroSlideshow({
       <div
         data-revrap=""
         data-container=""
-        className="relative z-[2] mx-auto w-full max-w-[1320px] px-12 pb-20"
+        className={`relative z-[2] mx-auto w-full max-w-[1320px] px-12 ${paddingBottom}`}
       >
         {children}
 

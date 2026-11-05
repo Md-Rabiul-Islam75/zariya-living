@@ -3,16 +3,25 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, type FormEvent } from "react";
 import { Reveal } from "@/components/motion/Reveal";
+import { sendLead } from "@/lib/lead";
 import { OFFERS } from "@/lib/offers-data";
+import { CONTACT } from "@/lib/site-data";
 
 export function OffersApply() {
   const { apply } = OFFERS;
   const [sent, setSent] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const [sending, setSending] = useState(false);
 
-  // Static for now — wire to an API route / CRM when going dynamic.
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSent(true);
+    if (sending) return;
+    setSending(true);
+    setFailed(false);
+    const delivered = await sendLead("offers-apply", Object.fromEntries(new FormData(e.currentTarget)));
+    setSending(false);
+    if (delivered) setSent(true);
+    else setFailed(true);
   }
 
   const input =
@@ -78,6 +87,11 @@ export function OffersApply() {
                   >
                     {apply.cta}
                   </motion.button>
+                  {failed && (
+                    <p role="alert" className="mt-4 text-sm text-gold">
+                      Sorry, we could not send that. Please call or WhatsApp us on {CONTACT.phone}.
+                    </p>
+                  )}
                 </motion.form>
               )}
             </AnimatePresence>

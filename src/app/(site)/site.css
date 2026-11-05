@@ -53,10 +53,14 @@ html:has(.z2) body {
 
   /* line-height matches the height these fields have in the design. */
   .z2 input,
+  .z2 select {
+    line-height: 1.15;
+  }
+
+  .z2 input,
   .z2 select,
   .z2 textarea {
     font-weight: 400;
-    line-height: 1.15;
   }
 
   .z2 ::placeholder {

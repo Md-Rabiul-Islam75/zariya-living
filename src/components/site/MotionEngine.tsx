@@ -74,6 +74,7 @@ class Motion {
     this.reduced = prefersReducedMotion();
     window.addEventListener("scroll", this.onScroll, { passive: true });
     window.addEventListener("resize", this.onScroll, { passive: true });
+    window.addEventListener("z:rescan", this.rescan);
     this.tick = setInterval(this.checkReveals, 300);
     if (this.reduced) return;
     this.pointer.lastY = window.scrollY;
@@ -87,6 +88,7 @@ class Motion {
     this.timers.forEach(clearTimeout);
     window.removeEventListener("scroll", this.onScroll);
     window.removeEventListener("resize", this.onScroll);
+    window.removeEventListener("z:rescan", this.rescan);
     document.removeEventListener("mousemove", this.onMove);
   }
 
@@ -122,6 +124,11 @@ class Motion {
     });
     this.timers.push(setTimeout(setup, 90));
   }
+
+  /** Components that swap in a new photo fire "z:rescan" so it joins the motion. */
+  private rescan = () => {
+    if (!this.reduced) requestAnimationFrame(() => this.scanImages());
+  };
 
   private hide(el: RevealEl, up = false) {
     const sign = up ? -1 : 1;

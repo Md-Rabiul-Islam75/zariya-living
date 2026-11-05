@@ -9,6 +9,7 @@ const rajdhani = Rajdhani({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://zariyaliving.com"),
   title: "Zariya Living — One Philosophy. Four Landscapes. A Lifetime of Belonging.",
   description:
     "Zariya is a community-living development in Sylhet, Bangladesh — an integrated Resort, organic Agro farm, and Lagoon Villa community. Built for generations, not today's market.",
