@@ -257,7 +257,7 @@ function TripleImpact() {
               lost on the way to market for lack of proper storage, processing and marketing.
               According to the FAO, that costs the country about USD 2.4 billion every year.
             </p>
-            <div data-grid="" className="mt-2 mb-[26px] grid grid-cols-3 gap-[14px]">
+            <div data-grid="" className="mt-2 mb-[26px] grid grid-cols-[repeat(3,1fr)] gap-[14px]">
               {NATION_CARDS.map(([title, text]) => (
                 <div key={title} className="rounded-[10px] bg-white px-5 py-[22px]">
                   <p className="text-[18px] font-semibold text-z-deep">{title}</p>
@@ -314,7 +314,7 @@ function Vision() {
   return (
     <section data-sec="" className="bg-white py-[120px]">
       <Container>
-        <div data-2col="" className="grid grid-cols-2 items-center gap-[70px]">
+        <div data-2col="" className="grid grid-cols-[1fr_1fr] items-center gap-[70px]">
           <div data-reveal="">
             <Eyebrow color="#092C2C">The Vision</Eyebrow>
             <h2 data-h2="" className="mt-[18px] text-[50px] leading-[1.1] font-normal text-z-deep">
@@ -367,7 +367,7 @@ function WhatGrows() {
             What Grows at Zariya
           </h2>
         </div>
-        <div data-grid="" className="mt-14 grid grid-cols-4 gap-6">
+        <div data-grid="" className="mt-14 grid grid-cols-[repeat(4,1fr)] gap-6">
           {CROPS.map(([title, text], i) => (
             <div
               key={title}
@@ -405,7 +405,7 @@ function SafeFood() {
       className="border-t border-solid border-[rgba(9,44,44,.08)] bg-white py-[120px]"
     >
       <Container>
-        <div data-2col="" className="grid grid-cols-2 items-start gap-[70px]">
+        <div data-2col="" className="grid grid-cols-[1fr_1fr] items-start gap-[70px]">
           <div data-reveal="">
             <Eyebrow color="#092C2C">Why We Are Building It</Eyebrow>
             <h2 data-h2="" className="mt-[18px] text-[50px] leading-[1.1] font-normal text-z-deep">
@@ -429,7 +429,7 @@ function SafeFood() {
             <p className="mb-[22px] text-[15.5px] font-semibold tracking-[.16em] text-z-green uppercase">
               A Trusted Food Ecosystem
             </p>
-            <div className="grid grid-cols-2 gap-[14px]">
+            <div className="grid grid-cols-[1fr_1fr] gap-[14px]">
               {ECOSYSTEM.map((item) => (
                 <div
                   key={item}
@@ -503,7 +503,7 @@ function TheModel() {
             selected local farmers, moving produce through one organised, quality-controlled chain.
           </p>
         </div>
-        <div data-grid="" className="mt-[60px] grid grid-cols-5 gap-4">
+        <div data-grid="" className="mt-[60px] grid grid-cols-[repeat(5,1fr)] gap-4">
           {MODEL_STEPS.map((step, i) => (
             <div
               key={step.title}
@@ -554,7 +554,7 @@ function MarketFit() {
   return (
     <section data-sec="" className="bg-white py-[120px]">
       <Container>
-        <div data-2col="" className="grid grid-cols-2 items-center gap-[70px]">
+        <div data-2col="" className="grid grid-cols-[1fr_1fr] items-center gap-[70px]">
           <div data-reveal="">
             <Eyebrow color="#092C2C">Fit-Market Matching</Eyebrow>
             <h2 data-h2="" className="mt-[18px] text-[46px] leading-[1.12] font-normal text-z-deep">
@@ -653,7 +653,7 @@ function AgroShareCards() {
             Own a Decimal. Reap for Generations.
           </h2>
         </div>
-        <div data-grid="" className="mt-[50px] grid grid-cols-3 gap-6">
+        <div data-grid="" className="mt-[50px] grid grid-cols-[repeat(3,1fr)] gap-6">
           {SHARE_CARDS.map((card, i) => (
             <div
               key={card.title}
@@ -709,7 +709,7 @@ function LifeAdvantage() {
             estimates of the everyday value a Zariya Agro Share can create for a household.
           </p>
         </div>
-        <div data-grid="" className="mt-[60px] grid grid-cols-3 gap-6">
+        <div data-grid="" className="mt-[60px] grid grid-cols-[repeat(3,1fr)] gap-6">
           {BENEFITS.map(([tag, figure, text], i) => (
             <div
               key={tag}

@@ -175,7 +175,7 @@ function AgroShare() {
             <div
               data-reveal=""
               data-grid=""
-              className="mt-10 grid grid-cols-3 border-y border-solid border-[rgba(9,44,44,.14)]"
+              className="mt-10 grid grid-cols-[repeat(3,1fr)] border-y border-solid border-[rgba(9,44,44,.14)]"
             >
               {AGRO_STATS.map((stat) => (
                 <div key={stat.title} className={stat.cell}>
@@ -255,7 +255,7 @@ function TripleImpact() {
             See the full model →
           </Link>
         </div>
-        <div data-grid="" className="mt-14 grid grid-cols-3 gap-[34px]">
+        <div data-grid="" className="mt-14 grid grid-cols-[repeat(3,1fr)] gap-[34px]">
           {TRIPLE_IMPACT.map((item, i) => (
             <div
               key={item.number}
@@ -415,7 +415,7 @@ function Pillars() {
             soon.
           </p>
         </div>
-        <div data-grid="" className="mt-16 grid grid-cols-3 gap-7">
+        <div data-grid="" className="mt-16 grid grid-cols-[repeat(3,1fr)] gap-7">
           {PILLARS.map((pillar, i) => (
             <Link
               key={pillar.title}
@@ -541,7 +541,7 @@ function LagoonVilla() {
       </div>
 
       <div data-container="" className="mx-auto max-w-[1320px] px-12 pt-24 pb-[110px]">
-        <div data-2col="" className="grid grid-cols-2 items-center gap-[70px]">
+        <div data-2col="" className="grid grid-cols-[1fr_1fr] items-center gap-[70px]">
           <div data-reveal="">
             <Eyebrow>A Global Lifestyle</Eyebrow>
             <h3 className="mt-[18px] text-[42px] leading-[1.12] font-normal text-white">
@@ -585,7 +585,7 @@ function LagoonVilla() {
         >
           Global Lagoon Villa Membership — Privileges
         </p>
-        <div data-grid="" className="mt-9 grid grid-cols-3 gap-[22px]">
+        <div data-grid="" className="mt-9 grid grid-cols-[repeat(3,1fr)] gap-[22px]">
           {PRIVILEGES.map((item, i) => (
             <div
               key={item.tag}
@@ -634,7 +634,7 @@ function OwnershipSnapshot() {
             children as a freehold asset.
           </p>
         </div>
-        <div data-grid="" className="mt-[60px] grid grid-cols-3 gap-6">
+        <div data-grid="" className="mt-[60px] grid grid-cols-[repeat(3,1fr)] gap-6">
           <Link
             href="/agro"
             data-greenhover=""
@@ -783,7 +783,7 @@ function Stories() {
             Stories from Zariyans.
           </h2>
         </div>
-        <div data-grid="" className="mt-16 grid grid-cols-3 gap-[30px]">
+        <div data-grid="" className="mt-16 grid grid-cols-[repeat(3,1fr)] gap-[30px]">
           {STORIES.map((story, i) => (
             <figure
               key={story.by}
@@ -833,7 +833,7 @@ function BeginYourPath() {
           </p>
         </div>
         <LeadForm kind="home" data-reveal="" data-delay="120" className="relative mt-[54px]">
-          <div data-2col="" className="grid grid-cols-2 gap-x-10 gap-y-[30px]">
+          <div data-2col="" className="grid grid-cols-[1fr_1fr] gap-x-10 gap-y-[30px]">
             {FORM_INPUTS.map((field) => (
               <label key={field.name} className="flex flex-col gap-[9px]">
                 <span className={FORM_LABEL}>{field.label}</span>
