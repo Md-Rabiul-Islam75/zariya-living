@@ -193,12 +193,6 @@ export function Footer() {
             </div>
             <p className="text-[15.5px] text-[rgba(255,255,255,.88)]">© 2026 Zariya Living Ltd.</p>
           </div>
-
-          <p className="mt-[26px] max-w-[90ch] text-[15.5px] leading-[1.7] text-z-gold italic">
-            All visuals, renderings, and images are conceptual representations only and are subject
-            to change. Final design, materials, landscaping, and finishes may vary from those
-            depicted.
-          </p>
         </div>
       </footer>
 
